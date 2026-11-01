@@ -1,0 +1,793 @@
+{
+  "dishes": [
+    {
+      "id": "egg_rice",
+      "name": "蛋炒饭",
+      "icon": "egg",
+      "price": 15,
+      "cookTime": 4,
+      "unlocked": true,
+      "region": "家常"
+    },
+    {
+      "id": "beef_noodle",
+      "name": "牛肉面",
+      "icon": "noodles",
+      "price": 22,
+      "cookTime": 5,
+      "unlocked": true,
+      "region": "西北"
+    },
+    {
+      "id": "chicken_rice",
+      "name": "黄焖鸡米饭",
+      "icon": "beef",
+      "price": 25,
+      "cookTime": 6,
+      "unlocked": true,
+      "region": "鲁味"
+    },
+    {
+      "id": "wonton",
+      "name": "鲜虾云吞",
+      "icon": "utensils",
+      "price": 18,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 500,
+      "region": "粤味"
+    },
+    {
+      "id": "bbq_rice",
+      "name": "烤肉拌饭",
+      "icon": "beef",
+      "price": 28,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 1200,
+      "region": "东北"
+    },
+    {
+      "id": "curry",
+      "name": "咖喱饭",
+      "icon": "soup",
+      "price": 30,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 2000,
+      "region": "东南亚"
+    },
+    {
+      "id": "sushi",
+      "name": "手卷寿司",
+      "icon": "fish",
+      "price": 35,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 3000,
+      "region": "日料"
+    },
+    {
+      "id": "hotpot",
+      "name": "小火锅",
+      "icon": "soup",
+      "price": 45,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 5000,
+      "region": "川渝"
+    },
+    {
+      "id": "mapo_tofu",
+      "name": "麻婆豆腐",
+      "icon": "soup",
+      "price": 26,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 800,
+      "region": "川菜"
+    },
+    {
+      "id": "gongbao_jiding",
+      "name": "宫保鸡丁",
+      "icon": "beef",
+      "price": 28,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 1200,
+      "region": "川菜"
+    },
+    {
+      "id": "shuizhu_yu",
+      "name": "水煮鱼",
+      "icon": "fish",
+      "price": 38,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 2500,
+      "region": "川菜"
+    },
+    {
+      "id": "laizi_ji",
+      "name": "辣子鸡",
+      "icon": "beef",
+      "price": 32,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 2000,
+      "region": "川菜"
+    },
+    {
+      "id": "baicai_ji",
+      "name": "白切鸡",
+      "icon": "beef",
+      "price": 30,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 2600,
+      "region": "粤菜"
+    },
+    {
+      "id": "xiajiao",
+      "name": "水晶虾饺",
+      "icon": "fish",
+      "price": 28,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 3000,
+      "region": "粤菜"
+    },
+    {
+      "id": "shaolafei_fan",
+      "name": "广式烧腊饭",
+      "icon": "beef",
+      "price": 32,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 3600,
+      "region": "粤菜"
+    },
+    {
+      "id": "duojiao_yutou",
+      "name": "剁椒鱼头",
+      "icon": "fish",
+      "price": 40,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 4200,
+      "region": "湘菜"
+    },
+    {
+      "id": "chao_rou",
+      "name": "辣椒炒肉",
+      "icon": "beef",
+      "price": 30,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 3300,
+      "region": "湘菜"
+    },
+    {
+      "id": "choudoufu",
+      "name": "长沙臭豆腐",
+      "icon": "utensils",
+      "price": 20,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 1500,
+      "region": "湘菜"
+    },
+    {
+      "id": "guobaorou",
+      "name": "锅包肉",
+      "icon": "beef",
+      "price": 30,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 3800,
+      "region": "东北"
+    },
+    {
+      "id": "suancai_jiaozi",
+      "name": "酸菜饺子",
+      "icon": "utensils",
+      "price": 26,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 3400,
+      "region": "东北"
+    },
+    {
+      "id": "daba_dunji",
+      "name": "东北大乱炖",
+      "icon": "soup",
+      "price": 35,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 4500,
+      "region": "东北"
+    },
+    {
+      "id": "roujiamo",
+      "name": "潼关肉夹馍",
+      "icon": "sandwich",
+      "price": 18,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 1800,
+      "region": "西北"
+    },
+    {
+      "id": "yangrou_paomo",
+      "name": "羊肉泡馍",
+      "icon": "soup",
+      "price": 30,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 4200,
+      "region": "西北"
+    },
+    {
+      "id": "liangpi",
+      "name": "陕西凉皮",
+      "icon": "noodles",
+      "price": 16,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 1500,
+      "region": "西北"
+    },
+    {
+      "id": "xiaolongbao",
+      "name": "灌汤小笼包",
+      "icon": "utensils",
+      "price": 24,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 3200,
+      "region": "江浙"
+    },
+    {
+      "id": "tangcu_paigu",
+      "name": "糖醋排骨",
+      "icon": "beef",
+      "price": 34,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 4800,
+      "region": "江浙"
+    },
+    {
+      "id": "dapan_ji",
+      "name": "新疆大盘鸡",
+      "icon": "soup",
+      "price": 40,
+      "cookTime": 9,
+      "unlocked": false,
+      "cost": 6800,
+      "region": "新疆"
+    },
+    {
+      "id": "yangrou_chuan",
+      "name": "羊肉串",
+      "icon": "beef",
+      "price": 22,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 2600,
+      "region": "新疆"
+    },
+    {
+      "id": "reganmian",
+      "name": "武汉热干面",
+      "icon": "noodles",
+      "price": 20,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 2900,
+      "region": "湖北"
+    },
+    {
+      "id": "ou_dunpai",
+      "name": "莲藕排骨汤",
+      "icon": "soup",
+      "price": 28,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 4400,
+      "region": "湖北"
+    },
+    {
+      "id": "guoqiao_mixian",
+      "name": "过桥米线",
+      "icon": "noodles",
+      "price": 30,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 5200,
+      "region": "云南"
+    },
+    {
+      "id": "qiguoji",
+      "name": "汽锅鸡",
+      "icon": "soup",
+      "price": 32,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 5800,
+      "region": "云南"
+    },
+    {
+      "id": "zhajiangmian",
+      "name": "老北京炸酱面",
+      "icon": "noodles",
+      "price": 26,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 4700,
+      "region": "京味"
+    },
+    {
+      "id": "lvdagun",
+      "name": "驴打滚",
+      "icon": "cake",
+      "price": 18,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 2000,
+      "region": "京味"
+    },
+    {
+      "id": "shaxie_mian",
+      "name": "厦门沙茶面",
+      "icon": "noodles",
+      "price": 26,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 5300,
+      "region": "闽菜"
+    },
+    {
+      "id": "haolijian",
+      "name": "海蛎煎",
+      "icon": "soup",
+      "price": 34,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 6000,
+      "region": "闽菜"
+    },
+    {
+      "id": "luroufan",
+      "name": "台式卤肉饭",
+      "icon": "utensils",
+      "price": 24,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 3800,
+      "region": "台式风味"
+    },
+    {
+      "id": "zhenzhu_naicha",
+      "name": "珍珠奶茶",
+      "icon": "coffee",
+      "price": 16,
+      "cookTime": 3,
+      "unlocked": false,
+      "cost": 900,
+      "region": "台式风味"
+    },
+    {
+      "id": "shaoe_fan",
+      "name": "港式烧鹅饭",
+      "icon": "beef",
+      "price": 36,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 6400,
+      "region": "粤式港味"
+    },
+    {
+      "id": "danta",
+      "name": "葡式蛋挞",
+      "icon": "cake",
+      "price": 20,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 2800,
+      "region": "粤式港味"
+    },
+    {
+      "id": "jianbing",
+      "name": "煎饼果子",
+      "icon": "utensils",
+      "price": 15,
+      "cookTime": 4,
+      "unlocked": false,
+      "cost": 1400,
+      "region": "津味"
+    },
+    {
+      "id": "goubuli",
+      "name": "津门灌汤包",
+      "icon": "utensils",
+      "price": 22,
+      "cookTime": 5,
+      "unlocked": false,
+      "cost": 3500,
+      "region": "津味"
+    },
+    {
+      "id": "dongyingong",
+      "name": "冬阴功汤",
+      "icon": "soup",
+      "price": 36,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 7000,
+      "region": "泰国"
+    },
+    {
+      "id": "mangguo_niangmi",
+      "name": "芒果糯米饭",
+      "icon": "cake",
+      "price": 28,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 6200,
+      "region": "泰国"
+    },
+    {
+      "id": "niudong",
+      "name": "日式牛丼",
+      "icon": "beef",
+      "price": 34,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 7600,
+      "region": "日料"
+    },
+    {
+      "id": "tianfuwu_luo",
+      "name": "天妇罗",
+      "icon": "fish",
+      "price": 32,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 8000,
+      "region": "日料"
+    },
+    {
+      "id": "shijie_jiangfan",
+      "name": "石锅拌饭",
+      "icon": "utensils",
+      "price": 30,
+      "cookTime": 7,
+      "unlocked": false,
+      "cost": 8400,
+      "region": "韩料"
+    },
+    {
+      "id": "budui_guo",
+      "name": "部队火锅",
+      "icon": "soup",
+      "price": 42,
+      "cookTime": 9,
+      "unlocked": false,
+      "cost": 12000,
+      "region": "韩料"
+    },
+    {
+      "id": "hamburger",
+      "name": "美式汉堡",
+      "icon": "sandwich",
+      "price": 30,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 9000,
+      "region": "西餐"
+    },
+    {
+      "id": "zhaji_tong",
+      "name": "爆浆炸鸡桶",
+      "icon": "beef",
+      "price": 36,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 10000,
+      "region": "西餐"
+    },
+    {
+      "id": "pizza",
+      "name": "意式披萨",
+      "icon": "cake",
+      "price": 45,
+      "cookTime": 9,
+      "unlocked": false,
+      "cost": 14000,
+      "region": "意餐"
+    },
+    {
+      "id": "roujiang_mian",
+      "name": "意式肉酱面",
+      "icon": "noodles",
+      "price": 38,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 13000,
+      "region": "意餐"
+    },
+    {
+      "id": "foiegras",
+      "name": "法式鹅肝",
+      "icon": "beef",
+      "price": 58,
+      "cookTime": 10,
+      "unlocked": false,
+      "cost": 22000,
+      "region": "法餐"
+    },
+    {
+      "id": "macaron",
+      "name": "马卡龙",
+      "icon": "cake",
+      "price": 30,
+      "cookTime": 6,
+      "unlocked": false,
+      "cost": 16000,
+      "region": "法餐"
+    },
+    {
+      "id": "sushi_he",
+      "name": "寿司盛盒",
+      "icon": "fish",
+      "price": 55,
+      "cookTime": 10,
+      "unlocked": false,
+      "cost": 18000,
+      "region": "日料"
+    },
+    {
+      "id": "luwei_pinpan",
+      "name": "潮汕卤味拼盘",
+      "icon": "beef",
+      "price": 40,
+      "cookTime": 8,
+      "unlocked": false,
+      "cost": 15000,
+      "region": "潮汕"
+    }
+  ],
+  "brandMenus": {
+    "golden_rice": [
+      {
+        "id": "g_egg",
+        "name": "黄金蛋炒饭",
+        "icon": "egg",
+        "e": "🍳",
+        "price": 20,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "g_royal",
+        "name": "皇上皇炒饭",
+        "icon": "egg",
+        "e": "👑",
+        "price": 28,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "g_truffle",
+        "name": "松露炒饭",
+        "icon": "egg",
+        "e": "🍄",
+        "price": 36,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "g_lobster",
+        "name": "龙虾炒饭",
+        "icon": "fish",
+        "e": "🦞",
+        "price": 48,
+        "cookTime": 7,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      }
+    ],
+    "speed_noodle": [
+      {
+        "id": "n_tonkotsu",
+        "name": "豚骨拉面",
+        "icon": "noodles",
+        "e": "🍜",
+        "price": 22,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "n_spicy",
+        "name": "地狱辣拉面",
+        "icon": "noodles",
+        "e": "🌶️",
+        "price": 25,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "n_tantan",
+        "name": "担担面",
+        "icon": "noodles",
+        "e": "🍜",
+        "price": 26,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "n_shoyu",
+        "name": "酱油拉面",
+        "icon": "noodles",
+        "e": "🍥",
+        "price": 20,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      }
+    ],
+    "bbq_king": [
+      {
+        "id": "b_skewer",
+        "name": "霸王烤串",
+        "icon": "beef",
+        "e": "🍢",
+        "price": 24,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "b_lamb",
+        "name": "炭烤羊腿",
+        "icon": "beef",
+        "e": "🍖",
+        "price": 42,
+        "cookTime": 8,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "b_wings",
+        "name": "香辣烤翅",
+        "icon": "beef",
+        "e": "🍗",
+        "price": 20,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "b_shrimp",
+        "name": "蒜蓉烤大虾",
+        "icon": "fish",
+        "e": "🦐",
+        "price": 36,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      }
+    ],
+    "diamond_dessert": [
+      {
+        "id": "d_pudding",
+        "name": "钻石布丁",
+        "icon": "heart",
+        "e": "🍮",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "d_tiramisu",
+        "name": "提拉米苏",
+        "icon": "heart",
+        "e": "🍰",
+        "price": 24,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "d_mango",
+        "name": "杨枝甘露冻",
+        "icon": "heart",
+        "e": "🥭",
+        "price": 20,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "d_cheese",
+        "name": "芝士蛋糕",
+        "icon": "heart",
+        "e": "🧀",
+        "price": 26,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      }
+    ],
+    "iron_pot": [
+      {
+        "id": "p_goose",
+        "name": "铁锅炖大鹅",
+        "icon": "beef",
+        "e": "🦢",
+        "price": 38,
+        "cookTime": 7,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "p_bone",
+        "name": "酱大骨",
+        "icon": "beef",
+        "e": "🦴",
+        "price": 30,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "p_guo",
+        "name": "锅包肉",
+        "icon": "beef",
+        "e": "🥓",
+        "price": 26,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      },
+      {
+        "id": "p_lion",
+        "name": "红烧狮子头",
+        "icon": "beef",
+        "e": "🧆",
+        "price": 32,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "品牌"
+      }
+    ]
+  }
+}

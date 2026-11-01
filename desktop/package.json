@@ -1,0 +1,72 @@
+{
+  "name": "canzher-3d",
+  "productName": "餐这儿",
+  "version": "1.0.0",
+  "description": "餐饮公司经营小游戏",
+  "author": "CanZher",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "homepage": "https://github.com/canzher/canzher-3d",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.canzher.game",
+    "productName": "餐这儿",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "app/**/*"
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        { "target": "nsis", "arch": ["x64", "ia32", "arm64"] },
+        { "target": "portable", "arch": ["x64", "ia32", "arm64"] },
+        { "target": "zip", "arch": ["x64", "ia32", "arm64"] }
+      ],
+      "signingHashAlgorithms": ["sha256"],
+      "rfc3161TimeStampServer": "http://timestamp.digicert.com",
+      "artifactName": "CanZher-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "餐这儿",
+      "artifactName": "CanZher-${version}-Setup-${arch}.${ext}",
+      "installerLanguages": ["zh_CN", "en_US"]
+    },
+    "portable": {
+      "artifactName": "CanZher-${version}-Portable-${arch}.${ext}"
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "category": "Game",
+      "maintainer": "CanZher <canzher@canzher.local>",
+      "vendor": "CanZher",
+      "desktop": {
+        "Name": "餐这儿",
+        "Comment": "餐饮公司经营小游戏",
+        "StartupWMClass": "canzher-3d"
+      },
+      "target": [
+        { "target": "deb", "arch": ["x64", "arm64", "armv7l"] },
+        { "target": "rpm", "arch": ["x64", "arm64", "armv7l"] }
+      ]
+    }
+  }
+}

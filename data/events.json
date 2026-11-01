@@ -1,0 +1,585 @@
+{
+  "slangEvents": [
+    {
+      "type": "boom_order",
+      "name": "爆单了！",
+      "desc": "订单量突然暴增！",
+      "chance": 0.1,
+      "minLevel": 2,
+      "notif": "下雨天订单暴增！后厨忙不过来，骑手排队等餐——爆单了！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "setFromMul",
+            "key": "_boomOrder",
+            "from": "orderBase",
+            "fallback": 3,
+            "mul": 2.5,
+            "round": "ceil"
+          },
+          {
+            "kind": "setFlag",
+            "key": "_boomDays",
+            "value": 1
+          }
+        ],
+        "result": "爆单！今日订单量x2.5，但出餐压力倍增，小心差评！"
+      }
+    },
+    {
+      "type": "fly_order",
+      "name": "飞单事故",
+      "desc": "一张订单在后厨传递中丢失了",
+      "chance": 0.06,
+      "minLevel": 3,
+      "notif": "飞单了！一张订单在后厨和前厅之间丢失，客人等了半天没人做！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              30,
+              80
+            ]
+          },
+          {
+            "kind": "setFlag",
+            "key": "_flyOrderPenalty",
+            "value": true
+          }
+        ],
+        "result": "飞单事故！补偿顾客{money}元，可能产生差评"
+      }
+    },
+    {
+      "type": "food_damage",
+      "name": "餐损",
+      "desc": "骑手配送途中餐品洒漏",
+      "chance": 0.08,
+      "minLevel": 2,
+      "notif": "餐损！骑手过减速带没减速，汤洒了半袋，顾客要退款！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              15,
+              50
+            ]
+          }
+        ],
+        "result": "餐损赔偿-{money}元，差评率可能上升"
+      }
+    },
+    {
+      "type": "bomb_order",
+      "name": "炸弹订单",
+      "desc": "一个超远距离+爬楼+禁骑的配送单",
+      "chance": 0.05,
+      "minLevel": 3,
+      "notif": "炸弹订单！6楼无电梯+禁骑小区+步行800米，骑手看了想跑路！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              20,
+              60
+            ]
+          }
+        ],
+        "result": "炸弹订单！骑手超时配送-{money}元补偿，差评警告"
+      }
+    },
+    {
+      "type": "inventory_check",
+      "name": "盘点发现亏损",
+      "desc": "月末盘点库存与账面不符",
+      "chance": 0.07,
+      "minLevel": 4,
+      "notif": "盘点异常！账面有50公斤大米实物只有40公斤，可能存在偷盗或虚报损耗！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              100,
+              300
+            ]
+          }
+        ],
+        "result": "盘点亏损-{money}元，供应链管理需要加强"
+      }
+    },
+    {
+      "type": "competitor_poach",
+      "name": "快招公司套路",
+      "desc": "有快招公司来骗加盟费",
+      "chance": 0.04,
+      "minLevel": 5,
+      "notif": "快招公司预警！某品牌收加盟费后跑路，你的加盟店可能受牵连！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              200,
+              500
+            ]
+          }
+        ],
+        "result": "快招公司跑路！加盟店受牵连-{money}元损失"
+      }
+    },
+    {
+      "type": "platform_weight",
+      "name": "平台权重下降",
+      "desc": "近期非异率超标被平台降权",
+      "chance": 0.06,
+      "minLevel": 3,
+      "notif": "平台降权！非异率超过3%，你的店铺排名下滑了！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "setFlag",
+            "key": "_platformWeightLoss",
+            "value": true
+          }
+        ],
+        "result": "平台权重下降！未来3天订单量-15%，需要冲好评恢复"
+      }
+    },
+    {
+      "type": "staff_strike",
+      "name": "员工罢工",
+      "desc": "后厨墩子因工资低罢工",
+      "chance": 0.05,
+      "minLevel": 4,
+      "notif": "后厨罢工！墩子嫌工资低集体停手，备菜全停了！",
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "rand": [
+              100,
+              250
+            ]
+          },
+          {
+            "kind": "setFlag",
+            "key": "_kitchenStrike",
+            "value": 1
+          }
+        ],
+        "result": "墩子罢工！加薪{money}元才复工，今日出餐速度-30%"
+      }
+    }
+  ],
+  "realEvents": [
+    {
+      "type": "equip_break",
+      "name": "设备故障",
+      "desc": "冰柜坏了！食材报废+维修费",
+      "chance": 0.08,
+      "minLevel": 3,
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "moneySub",
+            "pctOf": "dailyIncome",
+            "pct": 0.05,
+            "rand": [
+              50,
+              200
+            ]
+          }
+        ],
+        "result": "冰柜故障！报废食材+维修费 -{money}元"
+      }
+    },
+    {
+      "type": "property_hike",
+      "name": "物业涨价",
+      "desc": "物业通知管理费上调",
+      "chance": 0.06,
+      "minLevel": 4,
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "locAdd",
+            "key": "_propertyHike",
+            "value": 10
+          }
+        ],
+        "result": "物业费每天+10元，已累计加价+{value}元/天",
+        "resultFallback": "物业费涨价了"
+      }
+    },
+    {
+      "type": "platform_change",
+      "name": "平台调整抽点",
+      "desc": "外卖平台调整佣金比例",
+      "chance": 0.05,
+      "minLevel": 3,
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "adjAdd",
+            "key": "_platformFeeAdj",
+            "pick": [
+              0.02,
+              -0.01
+            ]
+          }
+        ],
+        "result": "平台抽佣{dir}{absPct}%（当前调整值{totalPct}%）"
+      }
+    },
+    {
+      "type": "food_surge",
+      "name": "食材涨价",
+      "desc": "批发市场食材价格暴涨",
+      "chance": 0.1,
+      "minLevel": 2,
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "setFlag",
+            "key": "_foodPriceBuff",
+            "value": 5
+          }
+        ],
+        "result": "食材涨价！未来5天原料成本+30%"
+      }
+    },
+    {
+      "type": "competitor_open",
+      "name": "周边新开竞品",
+      "desc": "旁边新开了同类竞品店，分流订单",
+      "chance": 0.12,
+      "minLevel": 2,
+      "effectSpec": {
+        "ops": [
+          {
+            "kind": "setFlag",
+            "key": "_competitorNearby",
+            "value": 3
+          }
+        ],
+        "result": "周边新开竞品！未来3天订单量-20%"
+      }
+    }
+  ],
+  "competitorEvents": [
+    {
+      "type": "poach",
+      "name": "同行挖人",
+      "desc": "隔壁连锁高薪挖你的员工！",
+      "chance": 0.15,
+      "minShops": 2
+    },
+    {
+      "type": "takeover",
+      "name": "恶意收购",
+      "desc": "大资本想吞掉你的店！",
+      "chance": 0.08,
+      "minShops": 3
+    },
+    {
+      "type": "price_war",
+      "name": "价格战",
+      "desc": "对面新开了竞品店，疯狂打折抢客！",
+      "chance": 0.2,
+      "minShops": 1
+    },
+    {
+      "type": "smear",
+      "name": "差评攻击",
+      "desc": "有人雇水军给你刷差评！",
+      "chance": 0.1,
+      "minShops": 2
+    }
+  ],
+  "competitorNames": [
+    "很强系资本",
+    "厉害了投行",
+    "本地餐饮巨头",
+    "连锁并购基金",
+    "某上市公司产业部"
+  ],
+  "personEvents": {
+    "傲娇": [
+      {
+        "msg": "{name}嫌今天的招牌菜配不上他，甩锅罢工",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}突然觉得自己被低估，撂挑子去天台抽烟",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}让老板买水还要半糖去冰，老板忍了",
+        "effect": "strike"
+      }
+    ],
+    "暴脾气": [
+      {
+        "msg": "{name}跟顾客吵起来，掀了桌子，赔了钱",
+        "effect": "cash"
+      },
+      {
+        "msg": "{name}摔了两个锅，后厨一片狼藉",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}骂哭新来的伙计，客人也被吓跑几个",
+        "effect": "rating"
+      }
+    ],
+    "狮子大开口": [
+      {
+        "msg": "{name}要求涨薪50%，不给就闹",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}拿别家offer威胁加薪，被你压住了",
+        "effect": "strike"
+      }
+    ],
+    "玻璃心": [
+      {
+        "msg": "{name}看到一条差评，蹲在角落哭了一下午",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}因为顾客说了句不好吃，心态崩了",
+        "effect": "strike"
+      }
+    ],
+    "水货": [
+      {
+        "msg": "{name}把糖当盐，出锅咸哭一片顾客",
+        "effect": "cash"
+      },
+      {
+        "msg": "{name}切菜像劈柴，还把自己手切了",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}记错单号，送错了一堆外卖",
+        "effect": "rating"
+      }
+    ],
+    "摸鱼": [
+      {
+        "msg": "{name}刷了两个小时短视频，出餐慢半拍",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}躲在后厨玩手机被抓，理直气壮",
+        "effect": "strike"
+      }
+    ],
+    "大牌": [
+      {
+        "msg": "{name}拒绝做非招牌菜，客人干等",
+        "effect": "strike"
+      },
+      {
+        "msg": "{name}要求单独一间厨房，不然不进后厨",
+        "effect": "strike"
+      }
+    ],
+    "稳定": [
+      {
+        "msg": "{name}默默把后厨擦得锃亮，老板心情不错",
+        "effect": "refund"
+      },
+      {
+        "msg": "{name}帮老板拦下一单逃单，赏他一下",
+        "effect": "refund"
+      }
+    ]
+  },
+  "newsPool": [
+    {
+      "type": "policy",
+      "title": "外卖平台推「夜宵补贴」",
+      "body": "今晚下单每单补贴3元，聪明的店主连夜多备夜宵。",
+      "effect": {
+        "type": "cash",
+        "amt": 300
+      }
+    },
+    {
+      "type": "policy",
+      "title": "本地美食节开幕在即",
+      "body": "商圈客流预计大增，抓紧备货迎客！",
+      "effect": {
+        "type": "buff",
+        "key": "traffic",
+        "val": 0.3
+      }
+    },
+    {
+      "type": "policy",
+      "title": "「放心餐厅」补贴计划",
+      "body": "通过卫生抽查的餐厅可领经营补贴。",
+      "effect": {
+        "type": "cash",
+        "amt": 500
+      }
+    },
+    {
+      "type": "trend",
+      "title": "外卖平台抽佣上调",
+      "body": "平台宣布下月起抽佣+2%，订单收益小幅下降。",
+      "effect": {
+        "type": "buff",
+        "key": "income",
+        "val": -0.12
+      }
+    },
+    {
+      "type": "trend",
+      "title": "预制菜大军进场",
+      "body": "大量预制菜外卖店开业，顾客选择变多，客流被分流。",
+      "effect": {
+        "type": "buff",
+        "key": "traffic",
+        "val": -0.12
+      }
+    },
+    {
+      "type": "event",
+      "title": "同城配送费涨价",
+      "body": "配送压力增大，订单到店间隔变长。",
+      "effect": {
+        "type": "buff",
+        "key": "interval",
+        "val": 2
+      }
+    },
+    {
+      "type": "event",
+      "title": "「打工人夜宵热」",
+      "body": "加班文化盛行，夜里单量暴增，今晚深夜客流翻倍！",
+      "effect": {
+        "type": "buff",
+        "key": "night",
+        "val": 1
+      }
+    },
+    {
+      "type": "joke",
+      "title": "某小吃登星级美食推荐？",
+      "body": "网传某国际小吃大酒店拿下星星，评论区吵翻了。",
+      "effect": {
+        "type": "info"
+      }
+    },
+    {
+      "type": "joke",
+      "title": "网红拉面店排队大军被劝离",
+      "body": "老板雇椅子军团造势，被城管当场拆队。",
+      "effect": {
+        "type": "cash",
+        "amt": 150
+      }
+    },
+    {
+      "type": "info",
+      "title": "「保温箱」新国标落地",
+      "body": "明年起外卖箱要贴负责人电话，老哥们记得贴。",
+      "effect": {
+        "type": "info"
+      }
+    }
+  ],
+  "spyTexts": {
+    "neighbor": [
+      {
+        "title": "隔壁烤鱼店搞满50抽免单",
+        "text": "客流要被隔壁吸走一波，下午客流稀一点。",
+        "type": "warning",
+        "buff": {
+          "traffic": -0.1
+        }
+      },
+      {
+        "title": "隔壁上了新口味炒酸奶",
+        "text": "排队排到咱们门口，看着气人但也没辙。",
+        "type": "info"
+      },
+      {
+        "title": "隔壁老板进货一整车冻品",
+        "text": "照这量估计要开活动，小心被卷。",
+        "type": "warning",
+        "buff": {
+          "interval": 1
+        }
+      },
+      {
+        "title": "隔壁把招牌抄串了字",
+        "text": "把「炒饭」写成了「炒反」，笑死，不构成威胁。",
+        "type": "joke"
+      }
+    ],
+    "rival": [
+      {
+        "title": "城南奶茶铺明天买一送一",
+        "text": "下午茶客流要被分流，收益预计缩水。",
+        "type": "warning",
+        "buff": {
+          "income": -0.1
+        }
+      },
+      {
+        "title": "竞对在谈「扫码立减」补贴",
+        "text": "补贴战要打响了，订单收益要缩水。",
+        "type": "warning",
+        "buff": {
+          "income": -0.12
+        }
+      },
+      {
+        "title": "老王烧烤高薪挖了个大厨",
+        "text": "去偷看了两眼，确实有两把刷子，你连夜翻工资单。",
+        "type": "info"
+      },
+      {
+        "title": "竞对老板去「考察学习」",
+        "text": "嘴上说是行业考察，朋友圈全是打卡照。",
+        "type": "joke"
+      }
+    ],
+    "boss": [
+      {
+        "title": "大佬店明天闭店团建",
+        "text": "他家客人今晚就涌过来了，能赚一波！",
+        "type": "benefit",
+        "buff": {
+          "traffic": 0.15
+        }
+      },
+      {
+        "title": "大佬店后厨供货渠道流出",
+        "text": "供应商甩货，帮你要到低价菜，省一笔。",
+        "type": "benefit",
+        "buff": {
+          "income": 0.1
+        }
+      },
+      {
+        "title": "大佬店都加了夜宵档",
+        "text": "夜宵是块肥肉，咱得跟上。",
+        "type": "info"
+      },
+      {
+        "title": "大佬店老板亲自端盘子闪了腰",
+        "text": "被顾客拍成表情包传疯了，笑不活了。",
+        "type": "joke"
+      }
+    ]
+  }
+}

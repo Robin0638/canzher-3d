@@ -1,0 +1,1875 @@
+[
+  {
+    "id": "milktea",
+    "shopEmoji": "🥤",
+    "name": "奶茶小铺",
+    "icon": "coffee",
+    "desc": "手作珍珠奶茶，饮品专卖",
+    "cost": 3000,
+    "income": 35,
+    "type": "饮品",
+    "startMoney": 2000,
+    "priceBonus": 0.15,
+    "staff": [
+      {
+        "id": "st_milktea_阿茶",
+        "name": "阿茶",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.15,
+        "salary": 55,
+        "age": 22,
+        "tag": "奶茶店小太阳",
+        "desc": "收银员·速度+15%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_milktea_大熊",
+        "name": "大熊",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.18,
+        "salary": 70,
+        "age": 28,
+        "tag": "手打狂魔",
+        "desc": "厨子·速度+18%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_milktea_阿茶",
+        "name": "阿茶",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.15,
+        "salary": 55,
+        "age": 22,
+        "tag": "奶茶店小太阳",
+        "desc": "收银员·速度+15%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_milktea_大熊",
+        "name": "大熊",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.18,
+        "salary": 70,
+        "age": 28,
+        "tag": "手打狂魔",
+        "desc": "厨子·速度+18%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "mt_pearl",
+        "name": "珍珠奶茶",
+        "e": "🥤",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "mt_yangzhi",
+        "name": "杨枝甘露",
+        "e": "🧋",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "热带"
+      },
+      {
+        "id": "mt_lemon",
+        "name": "暴打柠檬茶",
+        "e": "🍋",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "清爽"
+      },
+      {
+        "id": "mt_americano",
+        "name": "冰美式",
+        "e": "☕",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 600,
+        "region": "提神"
+      },
+      {
+        "id": "mt_orange",
+        "name": "鲜榨橙汁",
+        "e": "🧃",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 800,
+        "region": "鲜榨"
+      },
+      {
+        "id": "mt_matcha",
+        "name": "抹茶拿铁",
+        "e": "🍵",
+        "price": 17,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1200,
+        "region": "日式"
+      },
+      {
+        "id": "mt_peach",
+        "name": "蜜桃乌龙",
+        "e": "🍑",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1500,
+        "region": "果茶"
+      },
+      {
+        "id": "mt_coconut",
+        "name": "椰椰奶冻",
+        "e": "🥥",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1800,
+        "region": "清甜"
+      },
+      {
+        "id": "mt_choco",
+        "name": "巧克力奶昔",
+        "e": "🍫",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2200,
+        "region": "浓郁"
+      },
+      {
+        "id": "mt_jasmine",
+        "name": "茉莉花茶",
+        "e": "🫖",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2500,
+        "region": "清香"
+      },
+      {
+        "id": "mt_straw",
+        "name": "草莓奶昔",
+        "e": "🍓",
+        "price": 19,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3000,
+        "region": "少女"
+      },
+      {
+        "id": "mt_bubble",
+        "name": "黑糖波波茶",
+        "e": "🧋",
+        "price": 22,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 3800,
+        "region": "人气爆款"
+      }
+    ]
+  },
+  {
+    "id": "bbq",
+    "shopEmoji": "🍢",
+    "name": "烧烤江湖",
+    "icon": "beef",
+    "desc": "夜宵烧烤扛把子",
+    "cost": 6000,
+    "income": 65,
+    "type": "烧烤",
+    "startMoney": 2000,
+    "trafficBonus": 0.2,
+    "staff": [
+      {
+        "id": "st_bbq_烤姐",
+        "name": "烤姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.18,
+        "salary": 70,
+        "age": 30,
+        "tag": "铁签一把抓",
+        "desc": "收银员·速度+18%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_bbq_火哥",
+        "name": "火哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.25,
+        "salary": 95,
+        "age": 33,
+        "tag": "炭火人柱力",
+        "desc": "厨子·速度+25%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_bbq_烤姐",
+        "name": "烤姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.18,
+        "salary": 70,
+        "age": 30,
+        "tag": "铁签一把抓",
+        "desc": "收银员·速度+18%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_bbq_火哥",
+        "name": "火哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.25,
+        "salary": 95,
+        "age": 33,
+        "tag": "炭火人柱力",
+        "desc": "厨子·速度+25%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "bbq_lamb",
+        "name": "羊肉串",
+        "e": "🍢",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "bbq_wings",
+        "name": "烤鸡翅",
+        "e": "🍗",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "经典"
+      },
+      {
+        "id": "bbq_corn",
+        "name": "烤玉米",
+        "e": "🌽",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "素菜"
+      },
+      {
+        "id": "bbq_eggplant",
+        "name": "烤茄子",
+        "e": "🍆",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 700,
+        "region": "素菜"
+      },
+      {
+        "id": "bbq_fish",
+        "name": "烤秋刀鱼",
+        "e": "🐟",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1100,
+        "region": "海味"
+      },
+      {
+        "id": "bbq_squid",
+        "name": "烤鱿鱼",
+        "e": "🦑",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1400,
+        "region": "海味"
+      },
+      {
+        "id": "bbq_mushroom",
+        "name": "烤香菇",
+        "e": "🍄",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 1600,
+        "region": "素菜"
+      },
+      {
+        "id": "bbq_shrimp",
+        "name": "烤大虾",
+        "e": "🦐",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2000,
+        "region": "海鲜"
+      },
+      {
+        "id": "bbq_pork",
+        "name": "烤五花肉",
+        "e": "🥩",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2400,
+        "region": "肉类"
+      },
+      {
+        "id": "bbq_potato",
+        "name": "烤土豆片",
+        "e": "🥔",
+        "price": 8,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2600,
+        "region": "素菜"
+      },
+      {
+        "id": "bbq_skewer",
+        "name": "烤面筋",
+        "e": "🍡",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 3000,
+        "region": "人气"
+      },
+      {
+        "id": "bbq_crispy",
+        "name": "烤羊腰",
+        "e": "🍖",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 3800,
+        "region": "硬货"
+      }
+    ]
+  },
+  {
+    "id": "fried_chicken",
+    "shopEmoji": "🍗",
+    "name": "炸鸡快乐屋",
+    "icon": "beef",
+    "desc": "韩式炸鸡专门店",
+    "cost": 9000,
+    "income": 100,
+    "type": "炸鸡",
+    "startMoney": 1800,
+    "staff": [
+      {
+        "id": "st_fried_chicken_鸡姐",
+        "name": "鸡姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.2,
+        "salary": 75,
+        "age": 27,
+        "tag": "一单三声谢谢",
+        "desc": "收银员·速度+20%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_fried_chicken_炸王",
+        "name": "炸王",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.28,
+        "salary": 110,
+        "age": 38,
+        "tag": "下油锅不眨眼",
+        "desc": "厨子·速度+28%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_fried_chicken_鸡姐",
+        "name": "鸡姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.2,
+        "salary": 75,
+        "age": 27,
+        "tag": "一单三声谢谢",
+        "desc": "收银员·速度+20%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_fried_chicken_炸王",
+        "name": "炸王",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.28,
+        "salary": 110,
+        "age": 38,
+        "tag": "下油锅不眨眼",
+        "desc": "厨子·速度+28%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "ck_korean",
+        "name": "韩式炸鸡",
+        "e": "🍗",
+        "price": 25,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "ck_fries",
+        "name": "薯条",
+        "e": "🍟",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "小吃"
+      },
+      {
+        "id": "ck_classic",
+        "name": "原味炸鸡",
+        "e": "🍗",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "经典"
+      },
+      {
+        "id": "ck_hot",
+        "name": "火辣炸鸡",
+        "e": "🌶️",
+        "price": 24,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 800,
+        "region": "重口"
+      },
+      {
+        "id": "ck_cheese",
+        "name": "芝士炸鸡",
+        "e": "🧀",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 1300,
+        "region": "浓郁"
+      },
+      {
+        "id": "ck_burger",
+        "name": "香辣鸡腿堡",
+        "e": "🍔",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1700,
+        "region": "汉堡"
+      },
+      {
+        "id": "ck_cola",
+        "name": "快乐水",
+        "e": "🥤",
+        "price": 8,
+        "cookTime": 2,
+        "unlocked": false,
+        "cost": 1900,
+        "region": "标配"
+      },
+      {
+        "id": "ck_onion",
+        "name": "洋葱圈",
+        "e": "🧅",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2100,
+        "region": "小吃"
+      },
+      {
+        "id": "ck_nugget",
+        "name": "鸡米花",
+        "e": "🍿",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2500,
+        "region": "小吃"
+      },
+      {
+        "id": "ck_cutlet",
+        "name": "脆皮鸡排",
+        "e": "🍖",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 3000,
+        "region": "人气"
+      },
+      {
+        "id": "ck_wings",
+        "name": "水牛城辣翅",
+        "e": "🍗",
+        "price": 26,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3500,
+        "region": "美式"
+      },
+      {
+        "id": "ck_beer",
+        "name": "炸鸡啤酒套餐",
+        "e": "🍺",
+        "price": 45,
+        "cookTime": 8,
+        "unlocked": false,
+        "cost": 5000,
+        "region": "快乐套餐"
+      }
+    ]
+  },
+  {
+    "id": "noodle",
+    "shopEmoji": "🍜",
+    "name": "西北牛肉拉面",
+    "icon": "noodles",
+    "desc": "地道西北味，面食专营",
+    "cost": 7000,
+    "income": 80,
+    "type": "面食",
+    "startMoney": 1500,
+    "speedBonus": 0.1,
+    "staff": [
+      {
+        "id": "st_noodle_面妹",
+        "name": "面妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.16,
+        "salary": 60,
+        "age": 23,
+        "tag": "找零手速派",
+        "desc": "收银员·速度+16%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_noodle_甩面侠",
+        "name": "甩面侠",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 120,
+        "age": 29,
+        "tag": "面条会跟人姓",
+        "desc": "厨子·速度+30%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_noodle_面妹",
+        "name": "面妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.16,
+        "salary": 60,
+        "age": 23,
+        "tag": "找零手速派",
+        "desc": "收银员·速度+16%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_noodle_甩面侠",
+        "name": "甩面侠",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 120,
+        "age": 29,
+        "tag": "面条会跟人姓",
+        "desc": "厨子·速度+30%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "nd_lanzhou",
+        "name": "西北牛肉拉面",
+        "e": "🍜",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "nd_beef",
+        "name": "红烧牛肉面",
+        "e": "🍜",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "经典"
+      },
+      {
+        "id": "nd_zhajiang",
+        "name": "炸酱面",
+        "e": "🍝",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "北方"
+      },
+      {
+        "id": "nd_daoxiao",
+        "name": "刀削面",
+        "e": "🍜",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 800,
+        "region": "山西"
+      },
+      {
+        "id": "nd_liang",
+        "name": "鸡丝凉面",
+        "e": "🍜",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1000,
+        "region": "清爽"
+      },
+      {
+        "id": "nd_shaozi",
+        "name": "臊子面",
+        "e": "🍜",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1400,
+        "region": "陕西"
+      },
+      {
+        "id": "nd_dandan",
+        "name": "担担面",
+        "e": "🌶️",
+        "price": 17,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1800,
+        "region": "川味"
+      },
+      {
+        "id": "nd_yangrou",
+        "name": "羊肉泡馍",
+        "e": "🍲",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2200,
+        "region": "西北"
+      },
+      {
+        "id": "nd_zhua",
+        "name": "羊肉抓饭",
+        "e": "🍚",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2600,
+        "region": "新疆"
+      },
+      {
+        "id": "nd_huimian",
+        "name": "回民炒面",
+        "e": "🍜",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3000,
+        "region": "特色"
+      },
+      {
+        "id": "nd_hotpot",
+        "name": "牛肉拉面豪华版",
+        "e": "🍲",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 3800,
+        "region": "招牌"
+      }
+    ]
+  },
+  {
+    "id": "dumpling",
+    "shopEmoji": "🥟",
+    "name": "饺子大王",
+    "icon": "utensils",
+    "desc": "手工水饺现包现煮",
+    "cost": 5000,
+    "income": 55,
+    "type": "饺子",
+    "startMoney": 1800,
+    "staff": [
+      {
+        "id": "st_dumpling_西施",
+        "name": "西施",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.22,
+        "salary": 85,
+        "age": 26,
+        "tag": "饺子界门面",
+        "desc": "收银员·速度+22%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_dumpling_包叔",
+        "name": "包叔",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.32,
+        "salary": 135,
+        "age": 50,
+        "tag": "包了三十年褶",
+        "desc": "厨子·速度+32%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_dumpling_西施",
+        "name": "西施",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.22,
+        "salary": 85,
+        "age": 26,
+        "tag": "饺子界门面",
+        "desc": "收银员·速度+22%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_dumpling_包叔",
+        "name": "包叔",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.32,
+        "salary": 135,
+        "age": 50,
+        "tag": "包了三十年褶",
+        "desc": "厨子·速度+32%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "pz_pork",
+        "name": "猪肉大葱饺子",
+        "e": "🥟",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "pz_chive",
+        "name": "韭菜鸡蛋饺子",
+        "e": "🥟",
+        "price": 12,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "素馅"
+      },
+      {
+        "id": "pz_sanxian",
+        "name": "三鲜水饺",
+        "e": "🥟",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "经典"
+      },
+      {
+        "id": "pz_shrimp",
+        "name": "虾仁饺子",
+        "e": "🦐",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 800,
+        "region": "鲜味"
+      },
+      {
+        "id": "pz_fried",
+        "name": "煎饺",
+        "e": "🥟",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1000,
+        "region": "焦香"
+      },
+      {
+        "id": "pz_wonton",
+        "name": "鲜肉馄饨",
+        "e": "🍲",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1300,
+        "region": "汤食"
+      },
+      {
+        "id": "pz_hulatang",
+        "name": "胡辣汤",
+        "e": "🍲",
+        "price": 10,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1600,
+        "region": "暖胃"
+      },
+      {
+        "id": "pz_guotie",
+        "name": "锅贴",
+        "e": "🥟",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2000,
+        "region": "脆香"
+      },
+      {
+        "id": "pz_hongyou",
+        "name": "红油抄手",
+        "e": "🌶️",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2400,
+        "region": "川味"
+      },
+      {
+        "id": "pz_corn",
+        "name": "玉米猪肉饺子",
+        "e": "🌽",
+        "price": 12,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2800,
+        "region": "香甜"
+      },
+      {
+        "id": "pz_century",
+        "name": "皮蛋瘦肉粥",
+        "e": "🥣",
+        "price": 14,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3200,
+        "region": "养胃"
+      },
+      {
+        "id": "pz_xiaolong",
+        "name": "水晶虾饺",
+        "e": "🦐",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 4000,
+        "region": "粤味"
+      }
+    ]
+  },
+  {
+    "id": "hotpot",
+    "shopEmoji": "🍲",
+    "name": "火锅英雄",
+    "icon": "soup",
+    "desc": "一人食小火锅",
+    "cost": 12000,
+    "income": 140,
+    "type": "火锅",
+    "startMoney": 2500,
+    "staff": [
+      {
+        "id": "st_hotpot_辣妹",
+        "name": "辣妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.24,
+        "salary": 90,
+        "age": 24,
+        "tag": "微辣是底线",
+        "desc": "收银员·速度+24%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_hotpot_汤王",
+        "name": "汤王",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.35,
+        "salary": 150,
+        "age": 42,
+        "tag": "一锅汤熬三天",
+        "desc": "厨子·速度+35%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_hotpot_辣妹",
+        "name": "辣妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.24,
+        "salary": 90,
+        "age": 24,
+        "tag": "微辣是底线",
+        "desc": "收银员·速度+24%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_hotpot_汤王",
+        "name": "汤王",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.35,
+        "salary": 150,
+        "age": 42,
+        "tag": "一锅汤熬三天",
+        "desc": "厨子·速度+35%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "cp_spicy",
+        "name": "麻辣小火锅",
+        "e": "🍲",
+        "price": 35,
+        "cookTime": 7,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "cp_beef",
+        "name": "肥牛卷",
+        "e": "🥩",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "涮品"
+      },
+      {
+        "id": "cp_shrimp",
+        "name": "虾滑",
+        "e": "🦐",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "鲜味"
+      },
+      {
+        "id": "cp_duck",
+        "name": "鸭血",
+        "e": "❤️",
+        "price": 12,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 700,
+        "region": "涮品"
+      },
+      {
+        "id": "cp_mushroom",
+        "name": "金针菇",
+        "e": "🍄",
+        "price": 8,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 900,
+        "region": "素菜"
+      },
+      {
+        "id": "cp_okra",
+        "name": "毛肚",
+        "e": "🌶️",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1400,
+        "region": "经典"
+      },
+      {
+        "id": "cp_chicken",
+        "name": "卤鸡爪",
+        "e": "🐔",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1800,
+        "region": "卤味"
+      },
+      {
+        "id": "cp_lunch",
+        "name": "午餐肉",
+        "e": "🥫",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2100,
+        "region": "涮品"
+      },
+      {
+        "id": "cp_potato",
+        "name": "土豆片",
+        "e": "🥔",
+        "price": 6,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2400,
+        "region": "素菜"
+      },
+      {
+        "id": "cp_noodle",
+        "name": "红薯粉",
+        "e": "🍜",
+        "price": 8,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2700,
+        "region": "主食"
+      },
+      {
+        "id": "cp_green",
+        "name": "油麦菜",
+        "e": "🥬",
+        "price": 8,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2900,
+        "region": "素菜"
+      },
+      {
+        "id": "cp_dizhi",
+        "name": "菌菇拼盘",
+        "e": "🍄",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 3500,
+        "region": "山珍"
+      }
+    ]
+  },
+  {
+    "id": "sushi",
+    "shopEmoji": "🍣",
+    "name": "寿司物语",
+    "icon": "fish",
+    "desc": "简餐美食，匠心手作",
+    "cost": 18000,
+    "income": 210,
+    "type": "简餐美食",
+    "startMoney": 2000,
+    "staff": [
+      {
+        "id": "st_sushi_和子",
+        "name": "和子",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.26,
+        "salary": 100,
+        "age": 25,
+        "tag": "数米粒选手",
+        "desc": "收银员·速度+26%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_sushi_刀叔",
+        "name": "刀叔",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.38,
+        "salary": 160,
+        "age": 45,
+        "tag": "三文鱼克星",
+        "desc": "厨子·速度+38%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_sushi_和子",
+        "name": "和子",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.26,
+        "salary": 100,
+        "age": 25,
+        "tag": "数米粒选手",
+        "desc": "收银员·速度+26%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_sushi_刀叔",
+        "name": "刀叔",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.38,
+        "salary": 160,
+        "age": 45,
+        "tag": "三文鱼克星",
+        "desc": "厨子·速度+38%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "ss_salmon",
+        "name": "三文鱼寿司",
+        "e": "🍣",
+        "price": 30,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "ss_tuna",
+        "name": "金枪鱼寿司",
+        "e": "🍣",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "鲜味"
+      },
+      {
+        "id": "ss_onigiri",
+        "name": "手握饭团",
+        "e": "🍙",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "主食"
+      },
+      {
+        "id": "ss_eel",
+        "name": "鳗鱼寿司",
+        "e": "🍣",
+        "price": 35,
+        "cookTime": 7,
+        "unlocked": false,
+        "cost": 1000,
+        "region": "烤物"
+      },
+      {
+        "id": "ss_don",
+        "name": "照烧鸡排饭",
+        "e": "🍱",
+        "price": 25,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 1500,
+        "region": "定食"
+      },
+      {
+        "id": "ss_ramen",
+        "name": "豚骨拉面",
+        "e": "🍜",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 2000,
+        "region": "拉面"
+      },
+      {
+        "id": "ss_tempura",
+        "name": "天妇罗",
+        "e": "🍤",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2400,
+        "region": "炸物"
+      },
+      {
+        "id": "ss_california",
+        "name": "加州卷",
+        "e": "🍣",
+        "price": 24,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2800,
+        "region": "创新"
+      },
+      {
+        "id": "ss_icecream",
+        "name": "抹茶冰淇淋",
+        "e": "🍵",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 3200,
+        "region": "甜品"
+      },
+      {
+        "id": "ss_sashimi",
+        "name": "刺身拼盘",
+        "e": "🐟",
+        "price": 45,
+        "cookTime": 8,
+        "unlocked": false,
+        "cost": 4500,
+        "region": "豪华"
+      },
+      {
+        "id": "ss_teapot",
+        "name": "茶泡饭",
+        "e": "🍚",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 5000,
+        "region": "治愈"
+      }
+    ]
+  },
+  {
+    "id": "dessert",
+    "shopEmoji": "🥧",
+    "name": "甜品面包房",
+    "icon": "cake",
+    "desc": "面包甜点蛋挞专门店",
+    "cost": 15000,
+    "income": 175,
+    "type": "甜品",
+    "startMoney": 1500,
+    "staff": [
+      {
+        "id": "st_dessert_甜心",
+        "name": "甜心",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.2,
+        "salary": 78,
+        "age": 21,
+        "tag": "糖分补给站",
+        "desc": "收银员·速度+20%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_dessert_奶油哥",
+        "name": "奶油哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 120,
+        "age": 31,
+        "tag": "裱花如行云",
+        "desc": "厨子·速度+30%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_dessert_甜心",
+        "name": "甜心",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.2,
+        "salary": 78,
+        "age": 21,
+        "tag": "糖分补给站",
+        "desc": "收银员·速度+20%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_dessert_奶油哥",
+        "name": "奶油哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 120,
+        "age": 31,
+        "tag": "裱花如行云",
+        "desc": "厨子·速度+30%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "ds_tart",
+        "name": "葡式蛋挞",
+        "e": "🥧",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "ds_cupcake",
+        "name": "纸杯蛋糕",
+        "e": "🧁",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "甜品"
+      },
+      {
+        "id": "ds_croissant",
+        "name": "黄油可颂",
+        "e": "🥐",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "面包"
+      },
+      {
+        "id": "ds_tiramisu",
+        "name": "提拉米苏",
+        "e": "🍰",
+        "price": 25,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 900,
+        "region": "经典"
+      },
+      {
+        "id": "ds_pudding",
+        "name": "焦糖布丁",
+        "e": "🍮",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 1200,
+        "region": "甜品"
+      },
+      {
+        "id": "ds_waffle",
+        "name": "华夫饼",
+        "e": "🧇",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1600,
+        "region": "人气"
+      },
+      {
+        "id": "ds_donut",
+        "name": "甜甜圈",
+        "e": "🍩",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 1900,
+        "region": "甜品"
+      },
+      {
+        "id": "ds_pancake",
+        "name": "松饼",
+        "e": "🥞",
+        "price": 16,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2200,
+        "region": "早餐"
+      },
+      {
+        "id": "ds_berry",
+        "name": "草莓蛋糕",
+        "e": "🎂",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2800,
+        "region": "生日"
+      },
+      {
+        "id": "ds_mousse",
+        "name": "巧克力慕斯",
+        "e": "🍫",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3200,
+        "region": "浓郁"
+      },
+      {
+        "id": "ds_sandwich",
+        "name": "蛋奶三明治",
+        "e": "🥪",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 3600,
+        "region": "轻食"
+      },
+      {
+        "id": "ds_baguette",
+        "name": "法棍面包",
+        "e": "🥖",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 3800,
+        "region": "面包"
+      }
+    ]
+  },
+  {
+    "id": "fastfood",
+    "shopEmoji": "🍔",
+    "name": "汉堡工坊",
+    "icon": "sandwich",
+    "desc": "美式快餐汉堡热狗",
+    "cost": 10000,
+    "income": 115,
+    "type": "西餐",
+    "startMoney": 1800,
+    "staff": [
+      {
+        "id": "st_fastfood_快妹",
+        "name": "快妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.28,
+        "salary": 105,
+        "age": 22,
+        "tag": "汉堡过机手",
+        "desc": "收银员·速度+28%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_fastfood_堡哥",
+        "name": "堡哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.34,
+        "salary": 140,
+        "age": 36,
+        "tag": "翻面计时器",
+        "desc": "厨子·速度+34%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_fastfood_快妹",
+        "name": "快妹",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.28,
+        "salary": 105,
+        "age": 22,
+        "tag": "汉堡过机手",
+        "desc": "收银员·速度+28%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_fastfood_堡哥",
+        "name": "堡哥",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.34,
+        "salary": 140,
+        "age": 36,
+        "tag": "翻面计时器",
+        "desc": "厨子·速度+34%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "hb_classic",
+        "name": "经典汉堡",
+        "e": "🍔",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "hb_hotdog",
+        "name": "热狗",
+        "e": "🌭",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "经典"
+      },
+      {
+        "id": "hb_fries",
+        "name": "薯条",
+        "e": "🍟",
+        "price": 10,
+        "cookTime": 3,
+        "unlocked": true,
+        "cost": 0,
+        "region": "小吃"
+      },
+      {
+        "id": "hb_cheese",
+        "name": "芝士汉堡",
+        "e": "🍔",
+        "price": 20,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 800,
+        "region": "浓郁"
+      },
+      {
+        "id": "hb_beef",
+        "name": "牛肉汉堡",
+        "e": "🍔",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 1200,
+        "region": "多汁"
+      },
+      {
+        "id": "hb_double",
+        "name": "双层巨无霸",
+        "e": "🍔",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 1800,
+        "region": "硬核"
+      },
+      {
+        "id": "hb_cola",
+        "name": "可乐",
+        "e": "🥤",
+        "price": 8,
+        "cookTime": 2,
+        "unlocked": false,
+        "cost": 2000,
+        "region": "标配"
+      },
+      {
+        "id": "hb_nuggets",
+        "name": "鸡块",
+        "e": "🍗",
+        "price": 12,
+        "cookTime": 3,
+        "unlocked": false,
+        "cost": 2300,
+        "region": "小吃"
+      },
+      {
+        "id": "hb_wrap",
+        "name": "鸡肉卷",
+        "e": "🌯",
+        "price": 15,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 2600,
+        "region": "轻食"
+      },
+      {
+        "id": "hb_bacon",
+        "name": "培根汉堡",
+        "e": "🥓",
+        "price": 24,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 3000,
+        "region": "烟熏"
+      },
+      {
+        "id": "hb_taco",
+        "name": "墨西哥卷饼",
+        "e": "🌮",
+        "price": 18,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 3400,
+        "region": "异域"
+      },
+      {
+        "id": "hb_cheesefries",
+        "name": "芝士薯条",
+        "e": "🧀",
+        "price": 14,
+        "cookTime": 4,
+        "unlocked": false,
+        "cost": 3800,
+        "region": "罪恶"
+      }
+    ]
+  },
+  {
+    "id": "seafood",
+    "shopEmoji": "🦞",
+    "name": "海鲜大排档",
+    "icon": "fish",
+    "desc": "海鲜大咖，生猛海味",
+    "cost": 25000,
+    "income": 300,
+    "type": "海鲜",
+    "startMoney": 2200,
+    "staff": [
+      {
+        "id": "st_seafood_海姐",
+        "name": "海姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 115,
+        "age": 32,
+        "tag": "称重全靠手",
+        "desc": "收银员·速度+30%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_seafood_鲜爷",
+        "name": "鲜爷",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.4,
+        "salary": 170,
+        "age": 48,
+        "tag": "海鲜提鲜第一人",
+        "desc": "厨子·速度+40%",
+        "color": "#FF6B35"
+      }
+    ],
+    "estaff": [
+      {
+        "id": "st_seafood_海姐",
+        "name": "海姐",
+        "role": "收银员",
+        "roleIcon": "clipboard-list",
+        "icon": "user",
+        "speed": 0.3,
+        "salary": 115,
+        "age": 32,
+        "tag": "称重全靠手",
+        "desc": "收银员·速度+30%",
+        "color": "#2196F3"
+      },
+      {
+        "id": "st_seafood_鲜爷",
+        "name": "鲜爷",
+        "role": "厨子",
+        "roleIcon": "chef-hat",
+        "icon": "user",
+        "speed": 0.4,
+        "salary": 170,
+        "age": 48,
+        "tag": "海鲜提鲜第一人",
+        "desc": "厨子·速度+40%",
+        "color": "#FF6B35"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "sf_lobster",
+        "name": "龙虾粥",
+        "e": "🦞",
+        "price": 45,
+        "cookTime": 8,
+        "unlocked": true,
+        "cost": 0,
+        "region": "招牌"
+      },
+      {
+        "id": "sf_shrimp",
+        "name": "白灼虾",
+        "e": "🦐",
+        "price": 30,
+        "cookTime": 6,
+        "unlocked": true,
+        "cost": 0,
+        "region": "鲜味"
+      },
+      {
+        "id": "sf_clams",
+        "name": "辣炒花甲",
+        "e": "🐚",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": true,
+        "cost": 0,
+        "region": "下酒"
+      },
+      {
+        "id": "sf_crab",
+        "name": "香辣蟹",
+        "e": "🦀",
+        "price": 35,
+        "cookTime": 7,
+        "unlocked": false,
+        "cost": 1200,
+        "region": "硬菜"
+      },
+      {
+        "id": "sf_bass",
+        "name": "清蒸鲈鱼",
+        "e": "🐟",
+        "price": 32,
+        "cookTime": 7,
+        "unlocked": false,
+        "cost": 1800,
+        "region": "鲜美"
+      },
+      {
+        "id": "sf_squid",
+        "name": "铁板鱿鱼",
+        "e": "🦑",
+        "price": 22,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2200,
+        "region": "铁板"
+      },
+      {
+        "id": "sf_oyster",
+        "name": "蒜蓉生蚝",
+        "e": "🦪",
+        "price": 20,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 2600,
+        "region": "烧烤"
+      },
+      {
+        "id": "sf_soup",
+        "name": "海鲜汤",
+        "e": "🍲",
+        "price": 28,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 3200,
+        "region": "暖胃"
+      },
+      {
+        "id": "sf_roastfish",
+        "name": "烤鱼",
+        "e": "🐟",
+        "price": 25,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 3600,
+        "region": "烤物"
+      },
+      {
+        "id": "sf_prawn",
+        "name": "油焖大虾",
+        "e": "🦐",
+        "price": 35,
+        "cookTime": 7,
+        "unlocked": false,
+        "cost": 4200,
+        "region": "红烧"
+      },
+      {
+        "id": "sf_dumpling",
+        "name": "海鲜水饺",
+        "e": "🥟",
+        "price": 18,
+        "cookTime": 5,
+        "unlocked": false,
+        "cost": 4600,
+        "region": "主食"
+      },
+      {
+        "id": "sf_crabbao",
+        "name": "蟹黄包",
+        "e": "🦀",
+        "price": 25,
+        "cookTime": 6,
+        "unlocked": false,
+        "cost": 5200,
+        "region": "点心"
+      }
+    ]
+  }
+]

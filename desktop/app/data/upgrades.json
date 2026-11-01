@@ -1,0 +1,1169 @@
+{
+  "achievements": [
+    {
+      "id": "first_order",
+      "name": "初出茅庐",
+      "desc": "完成第一笔订单",
+      "icon": "target"
+    },
+    {
+      "id": "ten_orders",
+      "name": "渐入佳境",
+      "desc": "完成10笔订单",
+      "icon": "trending-up"
+    },
+    {
+      "id": "hundred_orders",
+      "name": "百单达人",
+      "desc": "完成100笔订单",
+      "icon": "bar-chart"
+    },
+    {
+      "id": "first_shop",
+      "name": "开疆拓土",
+      "desc": "收购第一家其他店铺",
+      "icon": "shopping-cart"
+    },
+    {
+      "id": "three_shops",
+      "name": "小有规模",
+      "desc": "拥有3家以上店铺",
+      "icon": "building"
+    },
+    {
+      "id": "first_mall",
+      "name": "商场大亨",
+      "desc": "开设第一家商场",
+      "icon": "building"
+    },
+    {
+      "id": "rich",
+      "name": "腰缠万贯",
+      "desc": "累计收入达到10万元",
+      "icon": "coins"
+    },
+    {
+      "id": "tycoon",
+      "name": "商业帝国",
+      "desc": "拥有10家以上店铺",
+      "icon": "crown"
+    },
+    {
+      "id": "five_star",
+      "name": "口碑爆棚",
+      "desc": "店铺评分达到4.8以上",
+      "icon": "star"
+    },
+    {
+      "id": "survivor",
+      "name": "坚持就是胜利",
+      "desc": "经营满7天",
+      "icon": "calendar"
+    },
+    {
+      "id": "pk_win",
+      "name": "PK之王",
+      "desc": "赢得一场对战PK",
+      "icon": "swords"
+    },
+    {
+      "id": "ww_win",
+      "name": "推理大师",
+      "desc": "赢得一场恶评猜疑",
+      "icon": "skull"
+    },
+    {
+      "id": "first_hire",
+      "name": "招兵买马",
+      "desc": "雇佣第一位员工",
+      "icon": "users"
+    },
+    {
+      "id": "first_franchise",
+      "name": "品牌加盟",
+      "desc": "加盟第一个品牌",
+      "icon": "building"
+    }
+  ],
+  "startEmployees": [
+    {
+      "id": "zhangge",
+      "name": "张哥",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "icon": "user",
+      "speed": 0.2,
+      "salary": 50,
+      "baseSalary": 50,
+      "age": 35,
+      "tag": "扫码快过手速王",
+      "desc": "收银快手，订单处理速度+20%",
+      "color": "#2196F3",
+      "isStart": true,
+      "fatigue": 0,
+      "mood": "normal",
+      "shift": "active"
+    },
+    {
+      "id": "haibao",
+      "name": "海宝",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "user",
+      "speed": 0.3,
+      "salary": 60,
+      "baseSalary": 60,
+      "age": 22,
+      "tag": "颠勺之王",
+      "desc": "厨艺精湛，烹饪速度+30%",
+      "color": "#FF6B35",
+      "isStart": true,
+      "fatigue": 0,
+      "mood": "normal",
+      "shift": "active"
+    }
+  ],
+  "shopSelect": [
+    {
+      "id": "fried_rice",
+      "name": "老王炒饭店",
+      "icon": "egg",
+      "desc": "经典炒饭起步",
+      "bonus": "初始资金+500",
+      "startMoney": 2000
+    },
+    {
+      "id": "noodle_shop",
+      "name": "西北牛肉拉面馆",
+      "icon": "noodles",
+      "desc": "面食专营",
+      "bonus": "烹饪速度+10%",
+      "startMoney": 1500,
+      "speedBonus": 0.1
+    },
+    {
+      "id": "tea_shop",
+      "name": "奶茶小铺",
+      "icon": "coffee",
+      "desc": "饮品起步",
+      "bonus": "客单价+15%",
+      "startMoney": 1500,
+      "priceBonus": 0.15
+    },
+    {
+      "id": "bbq_shop",
+      "name": "烧烤江湖",
+      "icon": "beef",
+      "desc": "夜宵之王",
+      "bonus": "客流量+20%",
+      "startMoney": 1500,
+      "trafficBonus": 0.2
+    },
+    {
+      "id": "hotpot_shop",
+      "name": "火锅英雄",
+      "icon": "soup",
+      "desc": "高端起步",
+      "bonus": "初始资金+1000",
+      "startMoney": 2500
+    }
+  ],
+  "mallTypes": [
+    {
+      "id": "food_court",
+      "name": "美食广场",
+      "icon": "store",
+      "desc": "小型美食城",
+      "cost": 30000,
+      "reqShops": 3,
+      "bonus": 0.2,
+      "desc2": "所有店铺收入+20%",
+      "slots": 4,
+      "rent": 30
+    },
+    {
+      "id": "complex",
+      "name": "商业综合体",
+      "icon": "building",
+      "desc": "吃喝玩乐一站式",
+      "cost": 80000,
+      "reqShops": 5,
+      "bonus": 0.4,
+      "desc2": "所有店铺收入+40%",
+      "slots": 6,
+      "rent": 60
+    },
+    {
+      "id": "plaza",
+      "name": "城市购物中心",
+      "icon": "building",
+      "desc": "地标级商业中心",
+      "cost": 200000,
+      "reqShops": 8,
+      "bonus": 0.8,
+      "desc2": "所有店铺收入+80%",
+      "slots": 8,
+      "rent": 110
+    },
+    {
+      "id": "empire",
+      "name": "商业帝国大厦",
+      "icon": "building",
+      "desc": "你的商业版图巅峰",
+      "cost": 500000,
+      "reqShops": 10,
+      "bonus": 1.5,
+      "desc2": "所有店铺收入+150%",
+      "slots": 10,
+      "rent": 200
+    }
+  ],
+  "locationTypes": [
+    {
+      "id": "commercial",
+      "name": "商圈店",
+      "icon": "briefcase",
+      "desc": "CBD核心地段，人流量巨大但成本极高",
+      "rent": 400,
+      "propertyFee": 120,
+      "trafficMult": 1.8,
+      "orderBaseMult": 1.6,
+      "platformFee": 0.22,
+      "color": "#E91E63",
+      "tag": "高成本高流量",
+      "difficulty": "高手",
+      "suit": "资金充足、想冲量的玩家"
+    },
+    {
+      "id": "community",
+      "name": "社区店",
+      "icon": "home",
+      "desc": "居民区底商，稳定客流，成本适中",
+      "rent": 180,
+      "propertyFee": 50,
+      "trafficMult": 1,
+      "orderBaseMult": 1,
+      "platformFee": 0.18,
+      "color": "#4CAF50",
+      "tag": "性价比之选",
+      "difficulty": "新手",
+      "suit": "稳健经营、步步为营"
+    },
+    {
+      "id": "remote",
+      "name": "宁静街边店",
+      "icon": "map-pin",
+      "desc": "宁静巷子，租金便宜但要靠活动拉客",
+      "rent": 60,
+      "propertyFee": 15,
+      "trafficMult": 0.5,
+      "orderBaseMult": 0.6,
+      "platformFee": 0.16,
+      "color": "#FF9800",
+      "tag": "低成本靠拉客",
+      "difficulty": "挑战",
+      "suit": "低成本创业、靠活动拉客"
+    }
+  ],
+  "supplyTypes": {
+    "drink": [
+      {
+        "id": "powder",
+        "name": "粉包冲调",
+        "icon": "package",
+        "color": "#FF9800",
+        "cookMult": 1.5,
+        "costMult": 0.6,
+        "qualityMod": -2,
+        "desc": "最便宜最快，但顾客一喝就知道是粉冲的，容易差评",
+        "tag": "低成本·快出餐·低品质"
+      },
+      {
+        "id": "jelly",
+        "name": "果酱果冻",
+        "icon": "cake",
+        "color": "#9C27B0",
+        "cookMult": 1.3,
+        "costMult": 0.8,
+        "qualityMod": -1,
+        "desc": "果酱调味道，果冻增加口感，品质一般但成本可控",
+        "tag": "中低成本·较快·品质一般"
+      },
+      {
+        "id": "canned",
+        "name": "罐头水果",
+        "icon": "archive",
+        "color": "#2196F3",
+        "cookMult": 1.1,
+        "costMult": 0.9,
+        "qualityMod": 0,
+        "desc": "罐头水果切切就出餐，品质稳定不出彩",
+        "tag": "中等成本·标准速·品质稳定"
+      },
+      {
+        "id": "fresh",
+        "name": "鲜果现榨",
+        "icon": "zap",
+        "color": "#4CAF50",
+        "cookMult": 0.9,
+        "costMult": 1.3,
+        "qualityMod": 2,
+        "desc": "新鲜水果现切现榨，出餐慢但品质拉满，好评率高",
+        "tag": "高成本·慢出餐·高品质"
+      }
+    ],
+    "food": [
+      {
+        "id": "premade",
+        "name": "全预制菜",
+        "icon": "package",
+        "color": "#FF9800",
+        "cookMult": 1.5,
+        "costMult": 0.5,
+        "qualityMod": -2,
+        "desc": "微波炉加热即出餐，极快极便宜，但预制菜味重差评多",
+        "tag": "最低成本·最快·低品质"
+      },
+      {
+        "id": "sauce_pack",
+        "name": "半成品料包",
+        "icon": "archive",
+        "color": "#FF6B35",
+        "cookMult": 1.2,
+        "costMult": 0.7,
+        "qualityMod": -1,
+        "desc": "统一料包调味+半成品食材，标准化出餐品质一般",
+        "tag": "低中成本·较快·品质一般"
+      },
+      {
+        "id": "prepped",
+        "name": "净菜配送",
+        "icon": "truck",
+        "color": "#2196F3",
+        "cookMult": 1,
+        "costMult": 1,
+        "qualityMod": 0,
+        "desc": "切配好的净菜直接炒，品质稳定成本适中",
+        "tag": "中等成本·标准速·品质稳定"
+      },
+      {
+        "id": "fresh_cook",
+        "name": "现买鲜材",
+        "icon": "zap",
+        "color": "#4CAF50",
+        "cookMult": 0.8,
+        "costMult": 1.4,
+        "qualityMod": 2,
+        "desc": "每天早市采购新鲜食材现炒，慢但好吃好评多",
+        "tag": "高成本·慢出餐·高品质"
+      }
+    ],
+    "noodle": [
+      {
+        "id": "frozen",
+        "name": "速冻面胚",
+        "icon": "package",
+        "color": "#FF9800",
+        "cookMult": 1.4,
+        "costMult": 0.6,
+        "qualityMod": -1,
+        "desc": "速冻面胚解冻即用，快但口感一般",
+        "tag": "低成本·快出餐·品质一般"
+      },
+      {
+        "id": "semi_dry",
+        "name": "半干面坯",
+        "icon": "archive",
+        "color": "#2196F3",
+        "cookMult": 1.1,
+        "costMult": 0.9,
+        "qualityMod": 0,
+        "desc": "半干面坯口感不错，成本和速度适中",
+        "tag": "中等成本·较快·品质稳定"
+      },
+      {
+        "id": "fresh_noodle",
+        "name": "现揉鲜面",
+        "icon": "zap",
+        "color": "#4CAF50",
+        "cookMult": 0.8,
+        "costMult": 1.2,
+        "qualityMod": 2,
+        "desc": "当日现揉面条口感拉满，出餐慢但回头客多",
+        "tag": "高成本·慢出餐·高品质"
+      }
+    ]
+  },
+  "costTiers": {
+    "L1": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    },
+    "L2": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    },
+    "L3": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    },
+    "L4": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    },
+    "L5": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    }
+  },
+  "seasonData": {
+    "spring": {
+      "name": "春季",
+      "utilityMult": 1,
+      "foodPriceMult": 1
+    },
+    "summer": {
+      "name": "夏季",
+      "utilityMult": 1.3,
+      "foodPriceMult": 1.1
+    },
+    "autumn": {
+      "name": "秋季",
+      "utilityMult": 0.9,
+      "foodPriceMult": 0.95
+    },
+    "winter": {
+      "name": "冬季",
+      "utilityMult": 1.4,
+      "foodPriceMult": 1.15
+    }
+  },
+  "customerTypes": [
+    {
+      "id": "student",
+      "name": "学生党",
+      "icon": "book-open",
+      "budget": [
+        8,
+        25
+      ],
+      "priceMult": 0.85,
+      "tipChance": 0.05,
+      "tipAmt": 2,
+      "weight": 30,
+      "tag": "穷但爱吃",
+      "desc": "生活费紧巴巴，但该吃还得吃"
+    },
+    {
+      "id": "worker",
+      "name": "打工人",
+      "icon": "briefcase",
+      "budget": [
+        15,
+        40
+      ],
+      "priceMult": 1,
+      "tipChance": 0.1,
+      "tipAmt": 5,
+      "weight": 35,
+      "tag": "午餐刚需",
+      "desc": "996的命，外卖是最后的温柔"
+    },
+    {
+      "id": "whitecollar",
+      "name": "白领精英",
+      "icon": "trending-up",
+      "budget": [
+        25,
+        60
+      ],
+      "priceMult": 1.2,
+      "tipChance": 0.2,
+      "tipAmt": 10,
+      "weight": 20,
+      "tag": "不差钱",
+      "desc": "追求品质，愿意为好东西买单"
+    },
+    {
+      "id": "tuhao",
+      "name": "土豪大佬",
+      "icon": "crown",
+      "budget": [
+        40,
+        100
+      ],
+      "priceMult": 1.5,
+      "tipChance": 0.4,
+      "tipAmt": 25,
+      "weight": 8,
+      "tag": "只点贵的",
+      "desc": "钱不是问题，问题是好不好吃"
+    },
+    {
+      "id": "foodie",
+      "name": "美食博主",
+      "icon": "camera",
+      "budget": [
+        20,
+        55
+      ],
+      "priceMult": 1.1,
+      "tipChance": 0.15,
+      "tipAmt": 8,
+      "weight": 7,
+      "tag": "拍照先吃",
+      "desc": "吃之前先拍100张照片"
+    }
+  ],
+  "promoTypes": [
+    {
+      "id": "fullCut",
+      "name": "满减优惠",
+      "icon": "tag",
+      "cost": 100,
+      "days": 1,
+      "priceMul": 1,
+      "trafficMult": 1.3,
+      "desc": "满30减5·满50减10·满80减15",
+      "shortDesc": "满减促销，门槛不高回头客多"
+    },
+    {
+      "id": "discount",
+      "name": "全场折扣",
+      "icon": "percent",
+      "cost": 200,
+      "days": 1,
+      "priceMul": 0.8,
+      "trafficMult": 1.5,
+      "desc": "全场8折，简单粗暴拉客流",
+      "shortDesc": "全场8折，薄利多销"
+    },
+    {
+      "id": "bogo",
+      "name": "买一送一",
+      "icon": "gift",
+      "cost": 300,
+      "days": 1,
+      "priceMul": 0.5,
+      "trafficMult": 1.8,
+      "desc": "指定饮品买一送一，亏本赚吆喝",
+      "shortDesc": "买一送一，亏本赚流量"
+    },
+    {
+      "id": "flash",
+      "name": "限时秒杀",
+      "icon": "zap",
+      "cost": 150,
+      "days": 1,
+      "priceMul": 0.5,
+      "trafficMult": 2,
+      "desc": "全天5折秒杀，来晚了就没了",
+      "shortDesc": "5折秒杀，流量爆炸"
+    },
+    {
+      "id": "groupBuy",
+      "name": "团购拼单",
+      "icon": "users",
+      "cost": 50,
+      "days": 1,
+      "priceMul": 0.6,
+      "trafficMult": 1.5,
+      "desc": "5人成团享6折，不成团自动退款",
+      "shortDesc": "5人成团6折，社交裂变",
+      "minBuyers": 5
+    }
+  ],
+  "lenders": {
+    "loanShark": {
+      "bankName": "鑫源民间借贷",
+      "bossName": "钱哥",
+      "bossIcon": "user-x",
+      "bossDesc": "穿金戴银、叼着雪茄的民间借贷大佬，笑脸迎人但翻脸比翻书快",
+      "greet": "哟，老弟来了？缺钱找钱哥，好说好说~",
+      "warns": [
+        "按时还钱啊，钱哥脾气可不太好",
+        "逾期会影响你后面的额度，别不当回事",
+        "上次那位没按时还的，现在还在打工慢慢补上",
+        "钱哥做生意讲究个信字，你懂的"
+      ]
+    },
+    "bank": {
+      "bankName": "华兴创业银行",
+      "bossName": "李行长",
+      "bossIcon": "briefcase",
+      "bossDesc": "西装笔挺、金丝眼镜的正规银行行长，办事严谨讲流程",
+      "greet": "您好，请出示您的营业执照和信用报告，我们按流程审批",
+      "warns": [
+        "银行贷款需按时归还，逾期将上报征信系统",
+        "请保持良好的信用记录，这关系到您后续的融资额度",
+        "我们只对信用70分以上的客户提供贷款服务",
+        "正规金融，阳光操作，拒绝一切灰色地带"
+      ]
+    },
+    "investor": {
+      "bankName": "龙腾风投基金",
+      "bossName": "龙爷",
+      "bossIcon": "dollar-sign",
+      "bossDesc": "戴百万名表、开限量跑车的风投大佬，赌的就是眼光和胆识",
+      "greet": "我看中的项目，从不犹豫。你有多少胆量，我就有多少子弹",
+      "warns": [
+        "投资不是借，拿了我的钱，每天收入分我一杯",
+        "亏了算我的，赚了分我的，这才叫投资",
+        "别想赖账，你每天的流水我看得清清楚楚",
+        "龙爷投的人，还没有看走眼过——希望你不是第一个"
+      ]
+    }
+  },
+  "loanPlans": {
+    "folk": [
+      {
+        "id": "small",
+        "name": "应急贷",
+        "amount": 5000,
+        "days": 3,
+        "rate": 0.05,
+        "fee": 0.03,
+        "note": "救急不救穷",
+        "bossSay": "老弟，这点小钱拿去周转，别忘了还啊"
+      },
+      {
+        "id": "mid",
+        "name": "翻本贷",
+        "amount": 20000,
+        "days": 5,
+        "rate": 0.07,
+        "fee": 0.05,
+        "note": "翻身就靠这一把",
+        "bossSay": "这把要是翻身了，记得请哥喝顿好的"
+      },
+      {
+        "id": "big",
+        "name": "豪赌贷",
+        "amount": 80000,
+        "days": 7,
+        "rate": 0.09,
+        "fee": 0.08,
+        "note": "借完别跑路",
+        "bossSay": "借这么多？老弟你最好心里有数，钱哥找人的本事可不是盖的"
+      }
+    ],
+    "bank": [
+      {
+        "id": "bk_small",
+        "name": "小微贷",
+        "amount": 10000,
+        "days": 7,
+        "rate": 0.03,
+        "fee": 0.01,
+        "note": "阳光普照小微企业",
+        "bossSay": "这是标准小微贷款，利率合规，请按时归还"
+      },
+      {
+        "id": "bk_mid",
+        "name": "发展贷",
+        "amount": 30000,
+        "days": 10,
+        "rate": 0.04,
+        "fee": 0.02,
+        "note": "成长型企业专用",
+        "bossSay": "发展贷审批通过，资金请用于正常经营"
+      },
+      {
+        "id": "bk_big",
+        "name": "扩张贷",
+        "amount": 100000,
+        "days": 14,
+        "rate": 0.05,
+        "fee": 0.03,
+        "note": "大规模扩张资金",
+        "bossSay": "大额贷款需严格按期归还，逾期将影响征信"
+      }
+    ]
+  },
+  "investPlans": [
+    {
+      "id": "iv_angel",
+      "name": "天使轮",
+      "amount": 20000,
+      "share": 0.08,
+      "days": 10,
+      "note": "种子期雪中送炭",
+      "bossSay": "天使轮嘛，20万我出2万，每天分我8%流水，10天到期"
+    },
+    {
+      "id": "iv_a",
+      "name": "A轮融资",
+      "amount": 50000,
+      "share": 0.12,
+      "days": 14,
+      "note": "成长期加码押注",
+      "bossSay": "A轮5万，每天12%流水分成，14天。赚多了我不眼红，亏了算我识人不明"
+    },
+    {
+      "id": "iv_b",
+      "name": "B轮重注",
+      "amount": 100000,
+      "share": 0.15,
+      "days": 21,
+      "note": "扩张期All in",
+      "bossSay": "B轮10万，每天15%分成，21天。这是龙爷最大的赌注，别让我失望"
+    }
+  ],
+  "talentPool": [
+    {
+      "name": "颠勺圣手阿坤",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.15,
+      "salary": 40,
+      "cost": 500,
+      "age": 26,
+      "tag": "控火艺术家"
+    },
+    {
+      "name": "零钱从不找错的小钞",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.1,
+      "salary": 35,
+      "cost": 400,
+      "age": 24,
+      "tag": "人肉计算器"
+    },
+    {
+      "name": "铁锅老周",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.4,
+      "salary": 80,
+      "cost": 1200,
+      "age": 45,
+      "tag": "三十年老师傅"
+    },
+    {
+      "name": "快手小美",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.3,
+      "salary": 70,
+      "cost": 1000,
+      "age": 27,
+      "tag": "键盘手速职业选手"
+    },
+    {
+      "name": "炒王阿强",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.5,
+      "salary": 100,
+      "cost": 2000,
+      "age": 33,
+      "tag": "颠锅三千次"
+    },
+    {
+      "name": "收银达人丽丽",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.25,
+      "salary": 55,
+      "cost": 800,
+      "age": 29,
+      "tag": "微笑杀手"
+    },
+    {
+      "name": "铁锅刘师傅",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.35,
+      "salary": 75,
+      "cost": 1500,
+      "age": 41,
+      "tag": "独家秘方持有人"
+    },
+    {
+      "name": "闪电小赵",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.35,
+      "salary": 65,
+      "cost": 1200,
+      "age": 23,
+      "tag": "扫码枪快手"
+    },
+    {
+      "name": "金牌老陈",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.6,
+      "salary": 120,
+      "cost": 3500,
+      "age": 48,
+      "tag": "厨神退役选手"
+    },
+    {
+      "name": "双枪婷婷",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.45,
+      "salary": 90,
+      "cost": 2500,
+      "age": 25,
+      "tag": "左右开弓"
+    },
+    {
+      "name": "深夜出摊的小马",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.28,
+      "salary": 60,
+      "cost": 1000,
+      "age": 31,
+      "tag": "夜宵圣手"
+    },
+    {
+      "name": "神速收银大壮",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.4,
+      "salary": 80,
+      "cost": 1800,
+      "age": 36,
+      "tag": "泰山压顶不动摇"
+    },
+    {
+      "name": "星级遗珠阿豪",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.5,
+      "salary": 110,
+      "cost": 3200,
+      "age": 30,
+      "tag": "星厨下凡"
+    },
+    {
+      "name": "人肉点单机小琪",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.5,
+      "salary": 100,
+      "cost": 3000,
+      "age": 22,
+      "tag": "过目不忘"
+    },
+    {
+      "name": "铁板豆腐西施",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "speed": 0.42,
+      "salary": 95,
+      "cost": 2700,
+      "age": 28,
+      "tag": "颜值与手艺并存"
+    },
+    {
+      "name": "算账快过计算器的老钱",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "speed": 0.55,
+      "salary": 110,
+      "cost": 3400,
+      "age": 44,
+      "tag": "心如算盘"
+    }
+  ],
+  "talentSpies": [
+    {
+      "name": "千里眼老王",
+      "role": "探子",
+      "roleIcon": "eye",
+      "speed": 0.2,
+      "salary": 60,
+      "cost": 900,
+      "age": 38,
+      "tag": "情报界老炮，蹲点十级"
+    },
+    {
+      "name": "顺风耳阿珍",
+      "role": "探子",
+      "roleIcon": "eye",
+      "speed": 0.35,
+      "salary": 90,
+      "cost": 1600,
+      "age": 30,
+      "tag": "偷听专业户，隔壁吵架都记笔记"
+    },
+    {
+      "name": "狗仔小罗",
+      "role": "探子",
+      "roleIcon": "eye",
+      "speed": 0.5,
+      "salary": 130,
+      "cost": 2600,
+      "age": 26,
+      "tag": "蹲坑大师，情报快人一步"
+    }
+  ],
+  "huntTargets": [
+    {
+      "id": "milo",
+      "name": "星级餐厅二星主厨·米罗",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "crown",
+      "speed": 0.75,
+      "salary": 160,
+      "fee": 2200,
+      "personality": "傲娇",
+      "personTag": "心情阴晴不定，罢工是日常",
+      "color": "#7B1FA2"
+    },
+    {
+      "id": "laobai",
+      "name": "千万营业额店长·老白",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "icon": "crown",
+      "speed": 0.6,
+      "salary": 140,
+      "fee": 1800,
+      "personality": "狮子大开口",
+      "personTag": "动不动要求加薪，不加就闹",
+      "color": "#1565C0"
+    },
+    {
+      "id": "may",
+      "name": "五星好评机·阿May",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "icon": "heart",
+      "speed": 0.55,
+      "salary": 120,
+      "fee": 1500,
+      "personality": "玻璃心",
+      "personTag": "看到差评就哭，停工半天",
+      "color": "#E91E63"
+    },
+    {
+      "id": "guizhong",
+      "name": "后厨妖刀·鬼冢",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "flame",
+      "speed": 0.8,
+      "salary": 180,
+      "fee": 2600,
+      "personality": "暴脾气",
+      "personTag": "一言不合摔锅，店里都怕他",
+      "color": "#D32F2F"
+    },
+    {
+      "id": "shabao",
+      "name": "自称连锁火锅店长·沙包",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "bomb",
+      "speed": 0.12,
+      "salary": 90,
+      "fee": 900,
+      "personality": "水货",
+      "personTag": "简历全靠编，切菜像劈柴",
+      "color": "#616161"
+    },
+    {
+      "id": "kaka",
+      "name": "潮牌联名店长·卡卡",
+      "role": "收银员",
+      "roleIcon": "clipboard-list",
+      "icon": "rocket",
+      "speed": 0.45,
+      "salary": 100,
+      "fee": 1100,
+      "personality": "摸鱼",
+      "personTag": "干半小时玩半小时，时快时慢",
+      "color": "#FF8C42"
+    },
+    {
+      "id": "wuming",
+      "name": "扫地僧·无名",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "shield",
+      "speed": 0.5,
+      "salary": 70,
+      "fee": 700,
+      "personality": "稳定",
+      "personTag": "闷头干饭，稳得一批",
+      "color": "#455A64"
+    },
+    {
+      "id": "acao",
+      "name": "天才小厨·阿草",
+      "role": "厨子",
+      "roleIcon": "chef-hat",
+      "icon": "zap",
+      "speed": 0.65,
+      "salary": 110,
+      "fee": 1300,
+      "personality": "稳定",
+      "personTag": "年轻肯练，后厨之星",
+      "color": "#2E7D32"
+    }
+  ],
+  "franchises": [
+    {
+      "id": "golden_rice",
+      "name": "黄金炒饭王",
+      "icon": "crown",
+      "desc": "高端炒饭连锁品牌",
+      "bonusType": "price",
+      "bonusVal": 0.2,
+      "joinCost": 2000,
+      "dailyFee": 100,
+      "desc2": "菜品价格+20%",
+      "unlockReq": {
+        "shops": 2,
+        "earned": 5000
+      },
+      "goal": {
+        "type": "sell",
+        "count": 80,
+        "reward": 3000
+      }
+    },
+    {
+      "id": "speed_noodle",
+      "name": "极速拉面",
+      "icon": "zap",
+      "desc": "日式拉面连锁",
+      "bonusType": "speed",
+      "bonusVal": 0.3,
+      "joinCost": 3000,
+      "dailyFee": 150,
+      "desc2": "烹饪速度+30%",
+      "unlockReq": {
+        "shops": 1,
+        "earned": 3000
+      },
+      "goal": {
+        "type": "sell",
+        "count": 60,
+        "reward": 2500
+      }
+    },
+    {
+      "id": "bbq_king",
+      "name": "霸王烧烤",
+      "icon": "flame",
+      "desc": "烧烤界扛把子",
+      "bonusType": "traffic",
+      "bonusVal": 0.4,
+      "joinCost": 5000,
+      "dailyFee": 200,
+      "desc2": "客流量+40%",
+      "unlockReq": {
+        "shops": 3,
+        "earned": 15000
+      },
+      "goal": {
+        "type": "sell",
+        "count": 100,
+        "reward": 5000
+      }
+    },
+    {
+      "id": "diamond_dessert",
+      "name": "钻石甜品",
+      "icon": "heart",
+      "desc": "法式甜品连锁",
+      "bonusType": "price",
+      "bonusVal": 0.3,
+      "joinCost": 8000,
+      "dailyFee": 300,
+      "desc2": "菜品价格+30%",
+      "unlockReq": {
+        "shops": 3,
+        "earned": 25000
+      },
+      "goal": {
+        "type": "rating",
+        "count": 45,
+        "reward": 8000
+      }
+    },
+    {
+      "id": "iron_pot",
+      "name": "铁锅联盟",
+      "icon": "utensils",
+      "desc": "中式快餐连锁",
+      "bonusType": "traffic",
+      "bonusVal": 0.3,
+      "joinCost": 4000,
+      "dailyFee": 180,
+      "desc2": "客流量+30%",
+      "unlockReq": {
+        "shops": 2,
+        "earned": 8000
+      },
+      "goal": {
+        "type": "sell",
+        "count": 70,
+        "reward": 3500
+      }
+    }
+  ],
+  "quickBrands": [
+    {
+      "id": "flash_tea",
+      "name": "闪电奶茶联盟",
+      "icon": "zap",
+      "desc": "快招品牌，客流量大增但风险高",
+      "bonusType": "traffic",
+      "bonusVal": 0.8,
+      "joinCost": 500,
+      "dailyFee": 50,
+      "desc2": "客流量+80%",
+      "closeChance": 0.15
+    },
+    {
+      "id": "speed_bento",
+      "name": "极速便当",
+      "icon": "rocket",
+      "desc": "快招品牌，速度飞快但可能跑路",
+      "bonusType": "speed",
+      "bonusVal": 0.5,
+      "joinCost": 800,
+      "dailyFee": 60,
+      "desc2": "烹饪速度+50%",
+      "closeChance": 0.2
+    },
+    {
+      "id": "cheap_eats",
+      "name": "惠民便当联盟",
+      "icon": "flag",
+      "desc": "快招品牌，薄利多销",
+      "bonusType": "traffic",
+      "bonusVal": 0.6,
+      "joinCost": 600,
+      "dailyFee": 40,
+      "desc2": "客流量+60%",
+      "closeChance": 0.18
+    },
+    {
+      "id": "mega_chicken",
+      "name": "超大炸鸡会",
+      "icon": "beef",
+      "desc": "快招品牌，超大份量",
+      "bonusType": "price",
+      "bonusVal": 0.4,
+      "joinCost": 700,
+      "dailyFee": 55,
+      "desc2": "菜品价格+40%",
+      "closeChance": 0.16
+    }
+  ]
+}

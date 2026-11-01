@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>餐这儿</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 14h16l-2 6a2 2 0 0 1-2 1.5H8a2 2 0 0 1-2-1.5L4 14z'/><path d='M4 14c0-4 2-8 8-8s8 4 8 8'/><path d='M9 6V2M12 6V2M15 6V2'/></svg>">
+<link rel="stylesheet" href="css/styles.css?v=20261022-chat-desktop2">
+</head>
+<body>
+<div id="phone">
+<div class="status-bar"><span id="sb-time" class="sb-time-btn" onclick="openCal()" style="display:none"><span class="sb-day" id="sb-day-text">第1天</span><span class="sb-sep">·</span><span class="sb-clock" id="sb-clock-text">上午9:00</span></span><div class="sb-r"><span class="sb-surge" id="sb-surge" title="爆单倒计时"><span class="sb-surge-ic" id="sb-surge-ic"></span><span class="sb-surge-t" id="sb-surge-t"></span></span><span id="mute-btn" style="cursor:pointer;margin-right:6px;display:none;align-items:center;justify-content:center;width:20px;height:20px;color:var(--text-d)" onclick="var m=SFX.toggleMute();updateMuteIcon(m)" title="点击开关音效"><svg id="mute-icon-on" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><svg id="mute-icon-off" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg></span><span style="display:flex;align-items:center;gap:6px" onclick="G.openMoney('money')"><span class="money-d" id="top-money-area" style="cursor:pointer;color:#fff"><span class="icon" data-i="coins" data-s="16"></span><span id="money-display">1,500</span><span id="money-loan-badge" style="display:none;background:var(--red);color:#fff;font-size:10px;border-radius:8px;padding:1px 5px">贷</span></span><span style="font-size:11px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:2px;cursor:pointer"><span class="icon" data-i="clipboard-list" data-s="12"></span><span id="tx-count">0</span>笔</span></span><span id="notif-btn" style="position:relative;cursor:pointer;display:none" onclick="G.openNotif()"><span class="icon" data-i="bell" data-s="16"></span><span id="notif-badge" style="position:absolute;top:-4px;right:-6px;background:var(--red);color:#fff;font-size:9px;min-width:14px;height:14px;border-radius:7px;display:none;align-items:center;justify-content:center;font-weight:700;padding:0 3px"></span></span></div></div>
+
+<!-- LOGIN -->
+<div class="login-screen" id="screen-login">
+<div class="login-hero"><div class="lh-title">餐这儿</div><div class="lh-sub">经营 · 对战 · 推理</div></div>
+
+<!-- Home: Two buttons -->
+<div class="login-form" id="ls-home">
+<button class="btn btn-primary" style="width:100%;padding:16px;font-size:18px;margin-bottom:12px;border-radius:14px" onclick="showNicknameInput()"><span class="icon" data-i="play-circle" data-s="20"></span> 开始新游戏</button>
+<button class="btn btn-gray" style="width:100%;padding:16px;font-size:18px;border-radius:14px" onclick="loadSave()"><span class="icon" data-i="archive" data-s="20"></span> 加载存档</button>
+<button class="btn btn-gray" style="width:100%;padding:12px;font-size:15px;border-radius:14px;margin-top:12px" onclick="showAbout()"><span class="icon" data-i="lightbulb" data-s="18"></span> 关于</button>
+<div style="display:flex;gap:8px;margin-top:12px">
+<button class="btn btn-blue" style="flex:1;padding:12px;font-size:15px;border-radius:14px" onclick="exportSave()"><span class="icon" data-i="download" data-s="18"></span> 导出存档</button>
+<button class="btn btn-success" style="flex:1;padding:12px;font-size:15px;border-radius:14px" onclick="importSave()"><span class="icon" data-i="upload" data-s="18"></span> 导入存档</button>
+</div>
+<button class="btn btn-primary" style="width:100%;padding:12px;font-size:15px;border-radius:14px;margin-top:8px" onclick="shareSave()"><span class="icon" data-i="share" data-s="18"></span> 分享存档</button>
+<div class="lf-hint" style="text-align:center;margin-top:14px">开始新游戏将创建全新存档<br>加载存档可恢复已有进度</div>
+</div>
+
+<!-- Nickname input (hidden) -->
+<div class="login-form" id="ls-nickname" style="display:none">
+<div class="lf-label" style="text-align:center;font-size:16px;margin-bottom:10px"><span class="icon" data-i="user" data-s="18"></span> 起个昵称</div>
+<div style="display:flex;gap:8px;align-items:stretch;margin-bottom:4px">
+<input class="lf-input" id="login-user" type="text" placeholder="输入你的昵称" maxlength="12" style="flex:1;min-width:0;text-align:center;font-size:18px;padding:14px;margin-bottom:0">
+<button class="btn btn-gray" style="flex:0 0 auto;padding:0 16px;font-size:15px;border-radius:12px" onclick="randomNickname()"><span class="icon" data-i="refresh" data-s="16"></span> 随机</button>
+</div>
+<div style="display:flex;gap:8px;margin-top:8px">
+<button class="btn btn-gray" style="flex:1;padding:14px;font-size:15px;border-radius:14px" onclick="backToHome()"><span class="icon" data-i="arrow-left" data-s="16"></span> 返回</button>
+<button class="btn btn-primary" style="flex:2;padding:14px;font-size:17px;border-radius:14px" onclick="doLogin()"><span class="icon" data-i="arrow-right" data-s="18"></span> 确认开始</button>
+</div>
+<div class="lf-hint" style="text-align:center;margin-top:10px">昵称将作为你的老板名</div>
+</div>
+
+<!-- Save selection (hidden) -->
+<div class="login-form" id="ls-saves" style="display:none"></div>
+</div>
+
+<!-- SHOP SELECT -->
+<div class="select-screen" id="screen-select" style="display:none">
+<div id="shop-select-list"></div>
+</div>
+
+<!-- MAIN GAME -->
+<div id="screen-game" style="display:none;flex-direction:column;flex:1;min-height:0">
+<div class="app-header">
+<div class="loc-row"><div style="display:flex;align-items:center;gap:8px"><span class="back-btn" onclick="logout()"><span class="icon" data-i="log-out" data-s="16"></span> 退出</span><div class="loc-right" onclick="G.openShopSwitch&&G.openShopSwitch()" style="cursor:pointer" title="点击切换店铺"><span class="icon" data-i="map-pin" data-s="15"></span><span class="loc-t" id="loc-text">美食街</span><span class="icon" data-i="chevron-down" data-s="13"></span></div></div></div>
+
+</div>
+<div class="main-content" id="game-content">
+<div class="page active" id="p-shop"></div>
+<div class="page" id="p-staff"></div>
+<div class="page" id="p-franchise"></div>
+<div class="page" id="p-activity"></div>
+<div class="page" id="p-profile"></div>
+<div class="page" id="p-slang"></div>
+</div>
+
+<div class="bottom-nav" id="game-nav">
+<div class="nav-item active" data-tab="shop" id="nav-tab-shop"><span class="icon" data-i="store" data-s="22"></span><span class="nav-label">店铺</span></div>
+<div class="nav-item" data-tab="staff" id="nav-tab-staff"><span class="icon" data-i="users" data-s="22"></span><span class="nav-label">员工</span></div>
+<div class="nav-item" data-tab="franchise" id="nav-tab-franchise"><span class="icon" data-i="briefcase" data-s="22"></span><span class="nav-label">加盟招商</span></div>
+<div class="nav-item" data-tab="activity" id="nav-tab-activity"><span class="icon" data-i="zap" data-s="22"></span><span class="nav-label">活动</span><span class="nav-badge" id="nav-review-badge" style="display:none">0</span></div>
+<div class="nav-item" data-tab="profile" id="nav-tab-profile"><span class="icon" data-i="user" data-s="22"></span><span class="nav-label">我的</span></div>
+</div>
+</div>
+
+<!-- PK -->
+<div id="screen-pk" style="display:none;flex-direction:column;flex:1;min-height:0">
+<div class="pk-header"><div style="display:flex;justify-content:space-between;align-items:center"><span class="pk-title"><span class="icon" data-i="swords" data-s="20"></span> 对战PK</span><span class="back-btn" onclick="askExitMiniGame('pk')"><span class="icon" data-i="arrow-left" data-s="16"></span> 返回</span></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span style="font-size:13px;opacity:.9">回合</span><span class="pk-timer"><span class="icon" data-i="timer" data-s="18"></span><span id="pk-time">60</span>s</span></div><div class="pk-timer-bar"><div class="pk-timer-fill" id="pk-timer-fill" style="width:100%"></div></div></div>
+<div class="main-content" id="pk-content" style="padding-bottom:120px"><div id="pk-leaderboard" class="leaderboard"></div><div id="pk-orders" class="pk-orders-area"></div></div>
+<div class="pk-items-bar" id="pk-items-bar"></div>
+</div>
+
+<!-- WEREWOLF -->
+<div id="screen-ww" style="display:none;flex-direction:column;flex:1;min-height:0">
+<div class="ww-header"><div style="display:flex;justify-content:space-between;align-items:center"><span class="ww-title"><span class="icon" data-i="skull" data-s="20"></span> 恶评猜疑</span><span class="back-btn" onclick="askExitMiniGame('ww')"><span class="icon" data-i="arrow-left" data-s="16"></span> 返回</span></div><div class="ww-phase" id="ww-phase-display"><span class="icon" data-i="store" data-s="14"></span> 准备中...</div><div class="ww-round" id="ww-round-display">第1轮</div><div class="ww-phase-bar"><div class="ww-phase-fill" id="ww-phase-fill" style="width:100%"></div></div></div>
+<div class="main-content" id="ww-content" style="padding-bottom:10px"></div>
+</div>
+
+<div id="toast-container"></div>
+<!-- New Player Tutorial -->
+<div class="tutorial-overlay" id="tutorial-overlay"><div class="tutorial-bubble" id="tutorial-bubble"><div class="tb-arrow" id="tutorial-arrow" style="display:none"></div><div class="tb-icon" id="tutorial-icon"></div><div class="tb-title" id="tutorial-title"></div><div class="tb-body" id="tutorial-body"></div><div class="tb-dots" id="tutorial-dots"></div><div class="tb-btns" id="tutorial-btns"></div></div></div>
+<div class="tutorial-spotlight" id="tutorial-spotlight"></div>
+<div class="modal-overlay" id="intro-modal" style="display:none"><div class="modal"><div class="modal-header" id="intro-title">指南</div><div class="modal-body" id="intro-body"></div><div class="modal-footer"><button class="btn btn-primary" onclick="closeIntro()" style="padding:10px 32px;font-size:15px">开始</button></div></div></div>
+<div class="modal-overlay" id="mini-exit-modal" style="display:none"><div class="modal" style="max-width:360px">
+<div class="modal-header" id="mini-exit-title">退出活动</div>
+<div class="modal-body" id="mini-exit-body"></div>
+<div class="modal-footer" id="mini-exit-footer"></div>
+</div></div>
+<div class="modal-overlay" id="money-modal" style="display:none"><div class="modal" style="max-width:380px">
+<div class="modal-header" id="money-title">财务中心</div>
+<div class="modal-body" id="money-body" style="flex:1;overflow-y:auto;padding:0"></div>
+<div class="modal-footer"><button class="btn btn-primary" onclick="G.closeMoney()" style="padding:10px 32px;font-size:15px">关闭</button></div>
+</div></div>
+
+<div class="modal-overlay" id="shop-modal" style="display:none"><div class="modal" style="max-width:360px">
+<div class="modal-header" id="shop-title">店铺切换</div>
+<div class="modal-body" id="shop-body" style="max-height:60vh;overflow-y:auto"></div>
+<div class="modal-footer"><button class="btn btn-primary" onclick="G.closeShopSwitch()" style="padding:10px 32px;font-size:15px">关闭</button></div>
+</div></div>
+
+<div class="modal-overlay" id="invoice-modal" style="display:none" onclick="G.closeInvoice()"><div class="modal" style="max-width:340px" onclick="event.stopPropagation()">
+<div class="modal-body" id="invoice-body" style="padding:0"></div>
+</div></div>
+
+<div class="modal-overlay" id="day-modal" style="display:none"><div class="modal" style="max-width:360px"><div class="modal-header" id="day-title">日结算</div><div class="modal-body" id="day-body"></div><div class="modal-footer"><button class="btn btn-primary" id="day-continue-btn" onclick="closeDaySettlement()" style="padding:10px 32px;font-size:15px">开始新一天</button></div></div></div>
+<div class="modal-overlay" id="screen-cal" style="display:none" onclick="closeCal()"><div class="modal cal-modal" onclick="event.stopPropagation()">
+<div class="cal-head"><button class="cal-nav" onclick="calNav(-1)">‹</button><div class="cal-title" id="cal-title"></div><button class="cal-nav" onclick="calNav(1)">›</button></div>
+<div class="cal-week"><div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div></div>
+<div class="cal-grid" id="cal-grid"></div>
+<div class="cal-clock" id="cal-clock"></div>
+<div class="cal-date" id="cal-date"></div>
+<div class="modal-footer" style="padding:4px 0 0;border:none"><button class="cal-close" onclick="closeCal()">关闭</button></div>
+</div></div>
+<div class="modal-overlay" id="menu-modal" style="display:none" onclick="closeMenuModal()"><div class="modal" style="max-width:360px" onclick="event.stopPropagation()"><div class="modal-header" id="menu-title"><span class="icon" data-i="utensils" data-s="18"></span> 菜单管理</div><div class="modal-body" id="menu-body" style="padding:12px;max-height:62vh;overflow-y:auto"></div></div></div>
+<div class="modal-overlay" id="supply-modal" style="display:none" onclick="closeSupplyModal()"><div class="modal" style="max-width:360px" onclick="event.stopPropagation()"><div class="modal-header" id="supply-title"><span class="icon" data-i="package" data-s="18"></span> 选品策略</div><div class="modal-body" id="supply-body" style="padding:12px;max-height:62vh;overflow-y:auto"></div></div></div>
+<div class="modal-overlay" id="swap-modal" style="display:none" onclick="G.closeSwap()"><div class="modal" style="max-width:360px" onclick="event.stopPropagation()"><div class="modal-header" id="swap-title"><span class="icon" data-i="refresh" data-s="18"></span> 选择换班对象</div><div class="modal-body" id="swap-body" style="padding:12px;max-height:62vh;overflow-y:auto"></div></div></div>
+</div>
+
+
+
+<div id="notif-panel" class="notif-panel"><div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)"><span style="font-weight:800;font-size:15px"><span class="icon" data-i="bell" data-s="16"></span> 通知中心</span><button onclick="G.closeNotif()" style="background:none;border:none;cursor:pointer;color:var(--text-m);padding:4px"><span class="icon" data-i="x" data-s="16"></span> 关闭</button></div><div class="notif-list" style="flex:1;overflow-y:auto;padding:8px 12px"></div></div><div class="modal-overlay" id="issue-modal" style="display:none" onclick="G.closeIssue()"><div class="modal" style="max-width:380px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column" onclick="event.stopPropagation()"><div class="modal-header" style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:800;font-size:16px"><span class="icon" data-i="alert-circle" data-s="18"></span> 顾客问题处理</span><button style="background:none;border:none;cursor:pointer;color:var(--text-m);padding:4px" onclick="G.closeIssue()"><span class="icon" data-i="x" data-s="18"></span></button></div><div id="issue-body" style="flex:1;overflow-y:auto;padding:12px 16px"></div></div></div><div class="modal-overlay" id="promo-modal" style="display:none" onclick="G.closePromo()"><div class="modal" style="max-width:380px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column" onclick="event.stopPropagation()"><div class="modal-header" style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:800;font-size:16px"><span class="icon" data-i="tag" data-s="18"></span> 创建营销活动</span><button style="background:none;border:none;cursor:pointer;color:var(--text-m);padding:4px" onclick="G.closePromo()"><span class="icon" data-i="x" data-s="18"></span></button></div><div id="promo-body" style="flex:1;overflow-y:auto;padding:12px 16px"></div></div></div><div class="modal-overlay" id="biz-hours-modal" style="display:none" onclick="closeBizHoursChanger()"><div class="modal" style="max-width:380px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column" onclick="event.stopPropagation()"><div class="modal-header" style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:800;font-size:16px"><span class="icon" data-i="clock" data-s="18"></span> 营业时长设置</span><button style="background:none;border:none;cursor:pointer;color:var(--text-m);padding:4px" onclick="closeBizHoursChanger()"><span class="icon" data-i="x" data-s="18"></span></button></div><div id="biz-hours-body" style="flex:1;overflow-y:auto;padding:12px 16px"></div></div></div>
+<script src="js/data-bundle.js?v=20261022-feedback"></script>
+<script src="js/game.js?v=20261022-feedback"></script>
+</body>
+</html>

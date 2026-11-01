@@ -1,0 +1,16 @@
+# 签名证书与密码等敏感文件，禁止提交到仓库（本地/网盘备份即可）
+cert/
+
+node_modules/
+.hbuilderx/
+.playwright-cli/
+
+# HBuilderX 产物目录（保留 res/ 图标，manifest.json 引用了它们）
+unpackage/cache/
+unpackage/release/
+unpackage/dist/
+
+# 桌面版构建产物
+desktop/dist/
+desktop/dist-linux/
+release/

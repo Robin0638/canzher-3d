@@ -1,0 +1,28 @@
+{
+    "version" : "1",
+    "prompt" : "template",
+    "title" : "隐私政策",
+    "message" : "　　请你务必审慎阅读、充分理解《隐私政策》各条款。《餐这儿》是一款单机离线经营小游戏：游戏过程不联网、不收集你的个人信息，游戏数据仅保存在设备本地；仅在你使用「导出存档/导入存档」功能时申请存储权限，拒绝不影响游戏。本应用基于 DCloud 引擎开发，运行中会采集应用启动时间、异常错误日志等包含设备唯一识别码的统计数据，用于改进产品与服务。<br/>你可点击<a href=\"privacy.html\">《餐这儿隐私政策》</a>了解详细信息。如你同意以上内容，请点击「同意并继续」开始使用。",
+    "buttonAccept" : "同意并继续",
+    "buttonRefuse" : "暂不同意",
+    "hrefLoader" : "default",
+    "second" : {
+        "title" : "温馨提示",
+        "message" : "　　进入应用前，你需先同意《餐这儿隐私政策》。点击「退出应用」将关闭本应用，这不会对你产生任何不利影响。",
+        "buttonAccept" : "同意并继续",
+        "buttonRefuse" : "退出应用"
+    },
+    "styles" : {
+        "backgroundColor" : "#FFFFFF",
+        "borderRadius" : "14px",
+        "title" : {
+            "color" : "#2B2F36"
+        },
+        "buttonAccept" : {
+            "color" : "#FF6B35"
+        },
+        "buttonRefuse" : {
+            "color" : "#7A8290"
+        }
+    }
+}

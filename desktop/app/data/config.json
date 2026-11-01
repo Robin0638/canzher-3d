@@ -1,0 +1,922 @@
+{
+  "repoUrl": "",
+  "contactEmail": "developrobin130@163.com",
+  "links": {
+    "bilibili": "",
+    "douyin": "",
+    "repo": ""
+  },
+  "time": {
+    "dayLength": 288,
+    "dayLengthNote": "现实秒数=游戏1天（每时段整12秒）",
+    "dineHours": [
+      [
+        "00",
+        "01"
+      ],
+      [
+        "01",
+        "02"
+      ],
+      [
+        "02",
+        "03"
+      ],
+      [
+        "03",
+        "04"
+      ],
+      [
+        "04",
+        "05"
+      ],
+      [
+        "05",
+        "06"
+      ],
+      [
+        "06",
+        "07"
+      ],
+      [
+        "07",
+        "08"
+      ],
+      [
+        "08",
+        "09"
+      ],
+      [
+        "09",
+        "10"
+      ],
+      [
+        "10",
+        "11"
+      ],
+      [
+        "11",
+        "12"
+      ],
+      [
+        "12",
+        "13"
+      ],
+      [
+        "13",
+        "14"
+      ],
+      [
+        "14",
+        "15"
+      ],
+      [
+        "15",
+        "16"
+      ],
+      [
+        "16",
+        "17"
+      ],
+      [
+        "17",
+        "18"
+      ],
+      [
+        "18",
+        "19"
+      ],
+      [
+        "19",
+        "20"
+      ],
+      [
+        "20",
+        "21"
+      ],
+      [
+        "21",
+        "22"
+      ],
+      [
+        "22",
+        "23"
+      ],
+      [
+        "23",
+        "24"
+      ]
+    ],
+    "bizHours": [
+      {
+        "id": "standard",
+        "name": "标准营业",
+        "icon": "clock",
+        "openHour": 9,
+        "closeHour": 22,
+        "hours": "9:00-22:00",
+        "desc": "从早上9点到晚上10点，覆盖午晚高峰",
+        "tag": "13小时"
+      },
+      {
+        "id": "early",
+        "name": "早鸟模式",
+        "icon": "sunrise",
+        "openHour": 6,
+        "closeHour": 21,
+        "hours": "6:00-21:00",
+        "desc": "早起的鸟儿有虫吃，抢早餐客流",
+        "tag": "15小时"
+      },
+      {
+        "id": "hardcore",
+        "name": "拼命三郎",
+        "icon": "flame",
+        "openHour": 7,
+        "closeHour": 23,
+        "hours": "7:00-23:00",
+        "desc": "从早到晚，最大努力赚钱模式",
+        "tag": "16小时"
+      },
+      {
+        "id": "night",
+        "name": "夜店模式",
+        "icon": "moon",
+        "openHour": 16,
+        "closeHour": 24,
+        "hours": "16:00-24:00",
+        "desc": "专做晚餐和夜审客流，低成本高客单",
+        "tag": "8小时"
+      },
+      {
+        "id": "allday",
+        "name": "24小时通宅",
+        "icon": "globe",
+        "openHour": 0,
+        "closeHour": 24,
+        "hours": "0:00-24:00",
+        "desc": "不睡觉的店！全天候单但夜间客流稀少",
+        "tag": "24小时"
+      }
+    ]
+  },
+  "level": {
+    "expBase": 100,
+    "expLinear": 80,
+    "expQuad": 30,
+    "unlockMessages": {
+      "3": " 解锁：平台抽佣+打包耗材",
+      "4": " 解锁：租金+物业费",
+      "5": " 解锁：水电+折旧+损耗"
+    }
+  },
+  "staff": {
+    "moodRatios": [
+      {
+        "min": 2.5,
+        "mood": "terrible"
+      },
+      {
+        "min": 2,
+        "mood": "bad"
+      },
+      {
+        "min": 1.5,
+        "mood": "great"
+      },
+      {
+        "min": 1.2,
+        "mood": "good"
+      },
+      {
+        "min": 0.9,
+        "mood": "normal"
+      },
+      {
+        "min": 0.7,
+        "mood": "bad"
+      },
+      {
+        "min": 0.5,
+        "mood": "terrible"
+      }
+    ],
+    "moodFallback": "angry",
+    "fatigueColorStops": [
+      {
+        "min": 80,
+        "color": "#B71C1C"
+      },
+      {
+        "min": 60,
+        "color": "#FF5722"
+      },
+      {
+        "min": 40,
+        "color": "#FF9800"
+      },
+      {
+        "min": 20,
+        "color": "#FFC107"
+      }
+    ],
+    "fatigueColorFallback": "#4CAF50",
+    "baseSalary": 200,
+    "salaryMinFloor": 20,
+    "salaryMinRatio": 0.3,
+    "salaryMaxRatio": 0,
+    "slackingSalary": 333
+  },
+  "tuning": {
+    "orderSingleDishRoll": 0.38,
+    "orderBigBudgetChance": 0.45,
+    "orderBigBudgetThreshold": 50,
+    "nightIntervalMult": 1.8,
+    "lowRatingIntervalPenalty": 3,
+    "minOrderInterval": 2,
+    "maxPendingOrders": 10,
+    "abandon": {
+      "penaltyRate": 0,
+      "badStarChance": 0.7,
+      "warnPending": 5
+    },
+    "passiveTickSeconds": 10,
+    "criticFiveStarChance": 0.7,
+    "starThresholds": [
+      0.5,
+      0.75,
+      0.88,
+      0.95
+    ],
+    "realEventChance": 0.15,
+    "realEventMinLevel": 2,
+    "facilityBreakChance": 0.3,
+    "hygieneEventChance": 0.25,
+    "safetyEventChance": 0.2,
+    "inspectionSafeLevel": 70,
+    "promoDays3Mult": 2.5,
+    "promoMaxDays": 7,
+    "surge": {
+      "baseInterval": 3.5,
+      "lunchMult": 0.55,
+      "dinnerMult": 0.5,
+      "warningSec": 3,
+      "naturalWarnSec": 2,
+      "durationSec": 40,
+      "cooldownSec": 45,
+      "spawnInterval": 1.6,
+      "burstMin": 20,
+      "burstMax": 100,
+      "maxPending": 120,
+      "priceBonus": 0.12,
+      "comboWindowSec": 10,
+      "comboStepBonus": 0.08,
+      "comboMax": 8,
+      "batchChance": 0.22,
+      "autoChanceLunch": 0.5,
+      "autoChanceDinner": 0.55,
+      "autoChanceDay": 0.06,
+      "manualCost": 80
+    }
+  },
+  "names": {
+    "customer": [
+      "干饭人小李",
+      "老顾客张姐",
+      "美食探店达人",
+      "今天吃啥呢",
+      "深夜觅食者",
+      "减肥明天再说",
+      "吃货老王",
+      "上班族小陈",
+      "夜宵党阿强",
+      "奶茶续命人",
+      "碳水爱好者",
+      "养生大叔",
+      "挑食的小美",
+      "大胃王建国",
+      "周末加餐人",
+      "美食博主小周",
+      "经常点外卖的阿杰",
+      "味蕾冒险家",
+      "吃货小胖子",
+      "加班狗小赵",
+      "挑嘴猫",
+      "外卖重度依赖者",
+      "食不言",
+      "干饭不积极思想有问题",
+      "今天不想做饭",
+      "饿了就吃",
+      "美食鉴定家",
+      "嘴刁的猫",
+      "吃到撑的阿牛",
+      "素食主义小林",
+      "肉食爱好者大刘",
+      "甜食控小甜",
+      "辣不怕的阿虎",
+      "清淡派老陈",
+      "重口味爱好者",
+      "快餐党小杨",
+      "慢食主义者",
+      "早午餐达人",
+      "夜猫子吃货",
+      "一人食的快乐",
+      "两人份起点的",
+      "三人行必有点外卖",
+      "团餐组织者",
+      "拼单小能手",
+      "凑单专业户",
+      "满减计算器",
+      "红包收集者",
+      "好评如潮的店常客",
+      "差评 sparingly 给",
+      "中评才是真爱",
+      "五星好评君",
+      "回购率百分百",
+      "收藏夹满了",
+      "购物车永远满的",
+      "省钱吃好货",
+      "又来吃了",
+      "换着花样点",
+      "尝试新店的人"
+    ],
+    "pkAi": [
+      "干饭王阿强",
+      "炒饭大仙",
+      "外卖达人",
+      "深夜厨神",
+      "炒面侠",
+      "火锅大王",
+      "奶茶杀手",
+      "烧烤之魂",
+      "干饭人二狗",
+      "美食终结者",
+      "碳水猛男",
+      "铁锅战神",
+      "颠勺之王",
+      "夜宵法师",
+      "外卖教父",
+      "爆炒天王",
+      "凉皮小王子",
+      "麻辣锅盖头",
+      "干饭洋务大臣",
+      "煎饼侠"
+    ],
+    "wwPlayer": [
+      "老王炒饭",
+      "胖姐麻辣烫",
+      "张哥烧烤",
+      "李姐奶茶店",
+      "赵叔面馆",
+      "孙记饺子馆",
+      "翠花酸辣粉",
+      "铁柱烧烤摊",
+      "二妮甜品屋",
+      "大壮鸡架王",
+      "小芳凉皮铺",
+      "老赵炸串",
+      "丽丽面包房",
+      "建国大排档",
+      "阿珍卤味坊",
+      "老黄焖鸡"
+    ],
+    "nickPrefix": [
+      "爆单",
+      "深夜",
+      "干饭",
+      "神级",
+      "传奇",
+      "街角",
+      "招牌",
+      "黄金",
+      "王牌",
+      "闪电",
+      "卷王",
+      "暴富",
+      "隐藏",
+      "全城",
+      "快乐",
+      "碳水"
+    ],
+    "nickSuffix": [
+      "大亨",
+      "战神",
+      "狂魔",
+      "老板",
+      "店长",
+      "大厨",
+      "骑手",
+      "团长",
+      "单王",
+      "小当家",
+      "美食家",
+      "守门员",
+      "合伙人"
+    ],
+    "shopNamePrefix": [
+      "老王",
+      "老张",
+      "老李",
+      "老陈",
+      "老杨",
+      "城南",
+      "城东",
+      "街角",
+      "巷口",
+      "桥头",
+      "后街",
+      "深夜",
+      "金牌",
+      "皇家",
+      "神秘",
+      "小城"
+    ]
+  },
+  "dow": {
+    "short": [
+      "日",
+      "一",
+      "二",
+      "三",
+      "四",
+      "五",
+      "六"
+    ],
+    "full": [
+      "周日",
+      "周一",
+      "周二",
+      "周三",
+      "周四",
+      "周五",
+      "周六"
+    ]
+  },
+  "sloganPools": {
+    "milktea": [
+      "一杯在手，天下我有",
+      "你的续命水，我们的骄傲",
+      "手作奶茶，暖心暖胃更暖钱包",
+      "今日份快乐，先干为敬",
+      "不是在喝奶茶，就是在去买奶茶的路上",
+      "甜度自由，快乐加倍",
+      "你喝的不是奶茶，是生活态度",
+      "珍珠不入地狱，奶茶拯救人间",
+      "今日不宜努力，宜喝奶茶",
+      "三分糖七分甜，十分快乐到明天"
+    ],
+    "bbq": [
+      "烟火气最抚凡人心",
+      "撸串不积极，思想有问题",
+      "没有什么是一顿烧烤解决不了的，如果有，就两顿",
+      "人生苦短，撸串趁早",
+      "烟熏火燎才是人间真味",
+      "一串解千愁，两串交朋友",
+      "夜宵界的扛把子，深夜食堂的MVP",
+      "没有烧烤的夜晚，都是将就",
+      "羊肉串配啤酒，天长地久",
+      "烤的不是串，是江湖"
+    ],
+    "fried_chicken": [
+      "炸鸡配可乐，快乐不会错",
+      "没有一块鸡肉能完整离开我的店",
+      "金黄酥脆，人生值得",
+      "你吃的是炸鸡，嚼的是幸福",
+      "卡路里就是幸福指数",
+      "外卖界的扛把子，快乐界的KOL",
+      "有炸鸡的饭局，都是好局",
+      "减肥从明天开始，炸鸡今天先上",
+      "一口嘎嘣脆，快乐永相随",
+      "炸鸡不嫌油，快乐不打折"
+    ],
+    "noodle": [
+      "一碗面，一座城的温度",
+      "汤鲜面劲道，吃完不想走",
+      "人生如面，越拉越长",
+      "西北人的早晨，从这碗面开始",
+      "一碗清汤面，治愈所有不开心",
+      "面食江湖，唯快不破",
+      "汤底熬足八小时，只为这一口",
+      "没有什么是一碗面解决不了的",
+      "揉的是面，拉的是人生",
+      "吃完这碗面，明天继续干"
+    ],
+    "hotpot": [
+      "没有什么是一顿火锅解决不了的",
+      "人生百味，尽在这一锅",
+      "毛肚七上八下，生活酸甜苦辣",
+      "锅里翻滚的不只是汤底，还有人情味",
+      "一个人吃火锅是孤独，两个人是江湖",
+      "辣椒是重庆人的灵魂，火锅是中国人的信仰",
+      "没有什么比火锅更懂社交",
+      "涮的是菜，煮的是人间",
+      "红汤翻滚处，便是江湖时",
+      "一锅煮天下，一涮解千愁"
+    ],
+    "default": [
+      "用心做好每一道菜",
+      "你的胃，我来守护",
+      "在这里，吃顿好的",
+      "小店虽不大，味道顶呱呱",
+      "每一份外卖，都是我们的承诺",
+      "认真做饭，踏实做人",
+      "味道是最好的名片",
+      "用心经营，只为回头客",
+      "好吃不贵，实在滋味",
+      "一饭一菜，皆是心意"
+    ]
+  },
+  "tutorial": {
+    "steps": [
+      {
+        "title": "欢迎来到餐这儿",
+        "icon": "star",
+        "body": "这是一个外卖经营模拟游戏。订单会自动到来，员工会自动接单、烹饪、配送 —— 你的任务是管理好店铺，赚取更多利润！",
+        "target": null,
+        "placement": "center"
+      },
+      {
+        "title": "这里是你的店铺主页",
+        "icon": "store",
+        "body": "这里展示今日营收、订单动态和厨房状态。订单会自动进入厨房，员工会自动处理 —— 你只需关注经营策略。",
+        "target": "#p-shop",
+        "placement": "top"
+      },
+      {
+        "title": "查看你的资金",
+        "icon": "coins",
+        "body": "点击金币区域可以打开财务中心，查看收支明细、贷款和投资。资金是经营的核心 —— 有了钱才能扩张！",
+        "target": "#top-money-area",
+        "placement": "bottom"
+      },
+      {
+        "title": "雇佣和管理员工",
+        "icon": "users",
+        "body": "点击「员工」标签，可以雇佣新员工来加快接单和烹饪速度。员工越多，出餐越快，但工资也是一笔开销。",
+        "target": "#nav-tab-staff",
+        "placement": "top"
+      },
+      {
+        "title": "加盟扩张你的品牌",
+        "icon": "briefcase",
+        "body": "在「加盟招商」中，你可以开设分店、招商加盟，扩大品牌影响力。不同店铺有不同初始加成。",
+        "target": "#nav-tab-franchise",
+        "placement": "top"
+      },
+      {
+        "title": "参加活动赚取奖励",
+        "icon": "zap",
+        "body": "「活动」中有各种限时玩法，如恶评猜疑、PK对战等。参加活动可以获得额外奖励和客流加成！",
+        "target": "#nav-tab-activity",
+        "placement": "top"
+      },
+      {
+        "title": "个人中心",
+        "icon": "user",
+        "body": "在「我的」中查看成就、存档和游戏设置。记得随时存档，避免丢失进度！",
+        "target": "#nav-tab-profile",
+        "placement": "top"
+      },
+      {
+        "title": "经营小贴士",
+        "icon": "lightbulb",
+        "body": "订单超时会差评，评分影响客流！前期稳扎稳打，攒钱雇佣员工、解锁菜品，逐步扩大经营规模。祝你生意兴隆！",
+        "target": null,
+        "placement": "center"
+      }
+    ],
+    "cur": 0,
+    "active": false
+  },
+  "themes": {
+    "milktea": {
+      "wall": 16773602,
+      "floor": [
+        "wood",
+        "#d9b585",
+        "#c8a271"
+      ],
+      "accent": 16747586,
+      "accentHex": "#FF8C42",
+      "cushion": 16747586,
+      "tableTop": 15921129,
+      "kit": "tea"
+    },
+    "bbq": {
+      "wall": 5128760,
+      "floor": [
+        "dark",
+        "#4a4440",
+        "#3e3934"
+      ],
+      "accent": 13849600,
+      "accentHex": "#e67e22",
+      "cushion": 9268835,
+      "tableTop": 7227951,
+      "kit": "grill"
+    },
+    "fried_chicken": {
+      "wall": 16774102,
+      "floor": [
+        "tile",
+        "#efe3c8",
+        "#e3d5b4"
+      ],
+      "accent": 13849600,
+      "accentHex": "#e67e22",
+      "cushion": 13849600,
+      "tableTop": 16643811,
+      "kit": "fryer"
+    },
+    "noodle": {
+      "wall": 15985368,
+      "floor": [
+        "wood",
+        "#d9c9a8",
+        "#c9b892"
+      ],
+      "accent": 12092939,
+      "accentHex": "#c9a227",
+      "cushion": 10256472,
+      "tableTop": 15260088,
+      "kit": "noodle"
+    },
+    "dumpling": {
+      "wall": 15788758,
+      "floor": [
+        "tile",
+        "#e8e2d2",
+        "#dcd4c0"
+      ],
+      "accent": 9268835,
+      "accentHex": "#a1887f",
+      "cushion": 9268835,
+      "tableTop": 16117984,
+      "kit": "dumpling"
+    },
+    "hotpot": {
+      "wall": 9255722,
+      "floor": [
+        "tile",
+        "#7a3b2c",
+        "#6b3225"
+      ],
+      "accent": 12986408,
+      "accentHex": "#e53935",
+      "cushion": 12986408,
+      "tableTop": 6111287,
+      "kit": "hotpot"
+    },
+    "sushi": {
+      "wall": 16117728,
+      "floor": [
+        "wood",
+        "#e0d5bd",
+        "#d0c3a5"
+      ],
+      "accent": 5533306,
+      "accentHex": "#607d8b",
+      "cushion": 5533306,
+      "tableTop": 15722712,
+      "kit": "sushi"
+    },
+    "dessert": {
+      "wall": 16640239,
+      "floor": [
+        "tile",
+        "#fbe3ec",
+        "#f5d3e0"
+      ],
+      "accent": 15695779,
+      "accentHex": "#ef7fa3",
+      "cushion": 15695779,
+      "tableTop": 16774648,
+      "kit": "bakery"
+    },
+    "burger": {
+      "wall": 16775388,
+      "floor": [
+        "tile",
+        "#efe6c8",
+        "#e3d7b0"
+      ],
+      "accent": 16361509,
+      "accentHex": "#f9a825",
+      "cushion": 16361509,
+      "tableTop": 16643024,
+      "kit": "burger"
+    },
+    "seafood": {
+      "wall": 14938359,
+      "floor": [
+        "tile",
+        "#cfe3ee",
+        "#bcd6e6"
+      ],
+      "accent": 166097,
+      "accentHex": "#29b6f6",
+      "cushion": 166097,
+      "tableTop": 15266552,
+      "kit": "seafood"
+    }
+  },
+  "scene3d": {
+    "room": {
+      "w": 13,
+      "d": 10,
+      "h": 2.6
+    },
+    "counterZ": -1.6,
+    "burners": [
+      -4.7,
+      -3.9,
+      -3.1,
+      -2.3
+    ],
+    "prepX": [
+      -0.5,
+      0.3,
+      1.1,
+      1.9,
+      2.7
+    ],
+    "passX": [
+      -0.9,
+      -0.5,
+      -0.1
+    ],
+    "tables": [
+      [
+        -4,
+        0.6
+      ],
+      [
+        -0.2,
+        0.6
+      ],
+      [
+        3.6,
+        0.6
+      ],
+      [
+        -4,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3.6,
+        3
+      ]
+    ],
+    "staffDoor": [
+      -6.15,
+      -3.3
+    ],
+    "frontDoor": [
+      6.4,
+      2.7
+    ],
+    "bubbleColors": {
+      "cook": "#43a047",
+      "cust": "#d98e13",
+      "rider": "#1e88e5"
+    }
+  },
+  "stateDefaults": {
+    "saveVersion": 1,
+    "money": 1500,
+    "day": 1,
+    "dayTimer": 0,
+    "level": 1,
+    "exp": 0,
+    "credit": 100,
+    "loanCount": 0,
+    "foodInventory": 100,
+    "foodWaste": 0,
+    "foodShortage": 0,
+    "_platformFeeAdj": 0,
+    "_foodPriceBuff": 0,
+    "_competitorNearby": 0,
+    "dailyIncome": 0,
+    "dailySalary": 0,
+    "dailyCompleted": 0,
+    "dailyExpired": 0,
+    "dailyBrandFee": 0,
+    "dailyRawMaterial": 0,
+    "dailyReviewCount": 0,
+    "dailyPlatformFee": 0,
+    "dailyPackaging": 0,
+    "dailyRent": 0,
+    "dailyPropertyFee": 0,
+    "dailyUtility": 0,
+    "dailyDepreciation": 0,
+    "dailyFoodWaste": 0,
+    "rawMaterialCost": 0,
+    "totalEarned": 0,
+    "totalCompleted": 0,
+    "totalExpired": 0,
+    "passiveTimer": 0,
+    "orderTimer": 0,
+    "eventTimer": 0,
+    "personTimer": 0,
+    "spyCount": 0,
+    "newsCount": 0,
+    "huntCount": 0,
+    "surgeCd": 0,
+    "surgeCombo": 0,
+    "surgeComboT": 0,
+    "dineTodayCount": 0,
+    "dineTodayIncome": 0,
+    "costProgress": {
+      "platform": true,
+      "rent": true,
+      "utility": true
+    },
+    "locMods": {},
+    "bizDays": [1, 2, 3, 4, 5, 6, 0],
+    "unlockedAch": {},
+    "unlockedBrands": {},
+    "brandGoalProgress": {},
+    "brandSoldCount": {},
+    "customerTypeStats": {},
+    "orders": [],
+    "reviews": [],
+    "malls": [],
+    "talentPool": [],
+    "franchises": [],
+    "quickBrands": [],
+    "demandWages": [],
+    "spyJobs": [],
+    "spyReports": [],
+    "newsList": [],
+    "huntTargets": [],
+    "huntJobs": [],
+    "chatList": [],
+    "loans": [],
+    "investments": [],
+    "budgetHistory": [],
+    "dineRecords": [],
+    "transactions": [],
+    "notifications": [],
+    "customerIssues": [],
+    "competitorLog": [],
+    "promoActivities": [],
+    "shopRating": 5,
+    "totalReviews": 0,
+    "reviewSum": 0,
+    "competitorCooldown": 3,
+    "facilityHealth": 100,
+    "hygieneLevel": 100,
+    "safetyLevel": 100,
+    "inspectionCount": 0,
+    "inspectionPenalty": 0,
+    "shutdownDays": 0,
+    "rentEscalation": 0,
+    "dineFloors": 1,
+    "dineCapacity": 6,
+    "bizOpenHour": 9,
+    "bizCloseHour": 24,
+    "bizHoursId": "standard",
+    "bizHoursLabel": "9:00-22:00",
+    "supplyType": "prepped",
+    "season": "spring",
+    "locationType": "community",
+    "homeTab": "takeout",
+    "currentTab": "shop",
+    "activeShopIdx": 0,
+    "reviewFilter": "all",
+    "scoreFilter": "all",
+    "nextOrderId": 1,
+    "moneyTab": "money",
+    "staffShopIdx": 0,
+    "franchiseShopIdx": 0,
+    "staffSection": "staff",
+    "activitySection": "news",
+    "profileSection": "overview",
+    "franchiseSection": "shops",
+    "slogan": "",
+    "groupName": "",
+    "locationName": "",
+    "loanChannel": "folk",
+    "budget": {
+      "hygiene": 50,
+      "maintenance": 50,
+      "safety": 50,
+      "total": 150
+    },
+    "dayBuffs": {
+      "interval": 0,
+      "income": 0,
+      "traffic": 0,
+      "night": false
+    },
+    "invoiceStats": {
+      "personal": 0,
+      "company": 0,
+      "noInvoice": 0
+    }
+  }
+}
