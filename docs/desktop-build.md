@@ -14,7 +14,6 @@
 
 ## 1. 产物一览（`release/`）
 
-所有文件 SHA256 校验和见 [`release/SHA256SUMS.txt`](../release/SHA256SUMS.txt)。
 
 ### Windows（x64 / x86(ia32) / arm64 三架构，全部已 Authenticode 签名）
 
@@ -174,7 +173,6 @@ wsl -d deepin -u root -e bash desktop/wsl-deb-sign.sh
 release/
 ├── windows/           # 安装器 / 便携版 / zip（全部已签名）
 ├── linux/             # deb(+.sig) / rpm / apt-repo
-└── SHA256SUMS.txt     # 全部产物校验和
 ```
 
 > 公钥文件（`release/keys/` 下的 cer 与 GPG 公钥）仅保留在本地，不上传仓库与 Release。
