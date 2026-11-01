@@ -5,14 +5,14 @@
 set -euo pipefail
 
 DIST_LINUX="/mnt/c/Users/MECHREVO/Documents/HBuilderProjects/餐这儿-3d - 副本 (2)/desktop/dist-linux"
-KEY="$DIST_LINUX/CANZHER-GPG-SECRET-KEY.asc"
+KEY="/mnt/c/Users/MECHREVO/Documents/HBuilderProjects/餐这儿-3d - 副本 (2)/cert/canzher-gpg-secret-key.asc"
 REPO="$HOME/apt-repo"
 BUILD="$HOME/canzher-build"
 
 export GNUPGHOME="$HOME/.gnupg-canzher"
 mkdir -p "$GNUPGHOME"
 chmod 700 "$GNUPGHOME"
-gpg --batch --import "$KEY"
+gpg --batch --import "$KEY" 2>/dev/null || echo "(key already in keyring)"
 gpg --list-keys 'canzher@canzher.local'
 
 mkdir -p "$REPO/pool/main/c/canzher-3d"

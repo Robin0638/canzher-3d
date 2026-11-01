@@ -57,17 +57,6 @@ npx serve .
 | `tools/` | 构建脚本：`node tools/build-data-bundle.js` |
 | `docs/` | 截图、打包说明、数据清单 |
 
-## 打包 APK / iOS App
-
-详见 [docs/build.md](./docs/build.md)。
-
-简述：
-
-1. 下载 [HBuilderX](https://www.dcloud.io/hbuilderx.html)，打开本仓库根目录
-2. 修改 `manifest.json` 中的 `id` / `version` / 应用名
-3. 配置 Android 签名 keystore（或 iOS 证书）
-4. 菜单 `发行 → 原生 APP-云打包` 提交
-
 ## 隐私合规
 
 本项目为纯单机游戏：不联网、不收集个人信息，存档仅保存在设备本地。合规文件如下：
@@ -107,8 +96,7 @@ npx serve .
 
 本项目除安卓 App 外，也提供 Electron 封装的桌面版：
 
-- **Windows**（x64 / x86 / ARM64）：NSIS 安装器、免安装便携版、zip，运行 exe 与安装器均已代码签名
-- **Linux**（amd64 / arm64 / armhf）：`.deb` + `.rpm`，已 GPG 签名，另附已签名 apt 仓库
+- **Windows**（x64 / x86 / ARM64）：NSIS 安装器、免安装便携版、zip
+- **Linux**（amd64 / arm64 / armhf）：`.deb` + `.rpm`
 
-构建与签名方法、产物验签方法见 [docs/desktop-build.md](docs/desktop-build.md)；
-验签公钥不随仓库与安装包分发，需要时可向作者索取（邮箱见「关于」页）。
+构建方法见 [docs/desktop-build.md](docs/desktop-build.md)。

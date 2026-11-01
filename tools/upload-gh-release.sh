@@ -53,7 +53,7 @@ upload() {
 }
 
 FAILED=0
-for f in release/windows/*.exe release/windows/*.zip release/linux/*.deb release/linux/*.deb.sig release/linux/*.rpm; do
+for f in release/windows/*.exe release/windows/*.zip release/linux/*.deb release/linux/*.rpm; do
   upload "$f" || FAILED=$((FAILED+1))
 done
 N=$(curl -s -H "Authorization: Bearer $TOKEN" "$API/repos/$REPO/releases/$RID/assets?per_page=100" | grep -c '"name"')

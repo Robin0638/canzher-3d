@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "餐饮公司经营小游戏",
   "author": "CanZher",
-  "license": "SEE LICENSE IN ../LICENSE",
+  "license": "MIT",
   "homepage": "https://github.com/canzher/canzher-3d",
   "main": "main.js",
   "private": true,
