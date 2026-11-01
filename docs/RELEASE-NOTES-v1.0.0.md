@@ -26,16 +26,16 @@
 | `canzher-3d-1.0.0.x86_64.rpm` | openEuler/Fedora/CentOS x86_64 |
 | `canzher-3d-1.0.0.aarch64.rpm` | RPM 系 arm64 |
 | `canzher-3d-1.0.0.armv7l.rpm` | RPM 系 armv7hl |
-| `CANZHER-GPG-PUBLIC-KEY.asc` | 验签公钥 |
 
 验签方法与 apt 仓库用法见 [desktop-build.md](desktop-build.md) 第三、四节。
 
 ## 签名与安全
 
-- Windows 包签名者：`CN=CanZher`（自签证书，公钥见附件 `canzher-codesign.cer`）。
-  自签证书会触发 SmartScreen/未知发布者提示，属正常现象；校验指纹
-  `8C14FC73C1851BC902FEB9D4878D372339471A5F` 后双击 cer 安装到「受信任的根证书颁发机构」即可消除提示。
-- 每个 Linux 包附校验和与签名，`rpm -K` 或 `gpg --verify` 均可验证。
+- Windows 包签名者：`CN=CanZher`（自签证书）。
+  自签证书会触发 SmartScreen/未知发布者提示，属正常现象；签名者证书指纹
+  `8C14FC73C1851BC902FEB9D4878D372339471A5F`。
+- 每个 Linux 包附校验和与签名，`rpm -K` 或 `gpg --verify` 均可验证；
+  验签公钥可向作者索取。
 
 ## SHA256 校验和
 
@@ -60,6 +60,4 @@ df0c0e92b71860cd0da25829f850d62c0ec102673f2f7a6629c77c491b5596e5 *release/linux/
 65c8a917fab92268fb12fcc45448a4fb1c511fb2486646e72767e1985ae12d73 *release/linux/canzher-3d_1.0.0_amd64.deb.sig
 f8ff86ababd13e4bbaaaeec45ca939b0b88b5b3123d7446a91b351e0b638f66c *release/linux/canzher-3d_1.0.0_arm64.deb.sig
 b17da38dd18efd7f9e2f4de3ed758569c1bbc33d555b6ecdf5586cd2d52cb845 *release/linux/canzher-3d_1.0.0_armv7l.deb.sig
-a00c67acf9cd085234199ddd9c90facd87dbff26f13859662d5fce08c4bf306b *release/keys/canzher-codesign.cer
-4509fc5e3f3b44b14076d7aa756380d18b5281fa9187eb710a067b2f177e7b10 *release/keys/CANZHER-GPG-PUBLIC-KEY.asc
 ```

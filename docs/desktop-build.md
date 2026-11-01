@@ -53,7 +53,7 @@
 | 算法 | RSA 3072 / SHA-256，RFC3161 时间戳（timestamp.digicert.com） |
 | 有效期 | 2026-11-01 至 2036-11-01 |
 | PFX（含私钥） | `cert/canzher-codesign.pfx`，密码见 `cert/desktop-signing-readme.txt`（本地文件，不入库） |
-| 公钥证书 | `release/keys/canzher-codesign.cer`（也是用户信任时安装的文件） |
+| 公钥证书 | `cert/canzher-codesign.cer`（用户信任时安装的文件；不随仓库/Release 分发，需要时向作者索取） |
 
 签名覆盖：应用主程序 `餐这儿.exe`（各架构）、卸载器、全部 NSIS 安装器、全部便携版 exe。
 重新生成证书：`powershell -File tools/gen-codesign-cert.ps1`。
@@ -87,7 +87,7 @@ deb/rpm 均用同一把 GPG 密钥签名（本地生成，无口令保护，仅�
 | 身份 | `CanZher Release <canzher@canzher.local>` |
 | 算法 | RSA 3072 |
 | 指纹 | `D07040EF1614D539C4BC67B6D65E7A86D8553E14` |
-| 公钥 | `release/keys/CANZHER-GPG-PUBLIC-KEY.asc` |
+| 公钥 | `release/keys/CANZHER-GPG-PUBLIC-KEY.asc`（仅存本地，不随仓库/Release 分发） |
 | 私钥备份 | `cert/canzher-gpg-secret-key.asc`（勿提交/外传） |
 
 ### rpm 验证（openEuler/Fedora 等）
@@ -174,6 +174,7 @@ wsl -d deepin -u root -e bash desktop/wsl-deb-sign.sh
 release/
 ├── windows/           # 安装器 / 便携版 / zip（全部已签名）
 ├── linux/             # deb(+.sig) / rpm / apt-repo
-├── keys/              # Windows 公钥证书 + GPG 公钥
 └── SHA256SUMS.txt     # 全部产物校验和
 ```
+
+> 公钥文件（`release/keys/` 下的 cer 与 GPG 公钥）仅保留在本地，不上传仓库与 Release。

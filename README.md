@@ -111,4 +111,4 @@ npx serve .
 - **Linux**（amd64 / arm64 / armhf）：`.deb` + `.rpm`，已 GPG 签名，另附已签名 apt 仓库
 
 构建与签名方法、产物验签方法见 [docs/desktop-build.md](docs/desktop-build.md)；
-公开验证密钥在 [keys/](keys/)（Windows 代码签名证书公钥 + GPG 公钥）。
+验签公钥不随仓库与安装包分发，需要时可向作者索取（邮箱见「关于」页）。

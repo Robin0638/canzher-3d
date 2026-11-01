@@ -40,7 +40,8 @@ HTTPS 推送 GitCode 时密码处填「私人令牌」（GitCode 头像 → 设�
 
   - `release/windows/`：全部 `.exe` 和 `.zip`（blockmap 可不传）
   - `release/linux/`：全部 `.deb` `.deb.sig` `.rpm`
-  - `release/keys/`：两个公钥文件
+
+  > 注意：不要上传任何密钥/证书文件（公钥也不传，验签公钥需要时私下提供）。
 
 - 命令行方式（更快，2.5GB 推荐这种）：
 
@@ -50,7 +51,6 @@ HTTPS 推送 GitCode 时密码处填「私人令牌」（GitCode 头像 → 设�
   gh release create v1.0.0 `
     release/windows/*.exe release/windows/*.zip `
     release/linux/*.deb release/linux/*.deb.sig release/linux/*.rpm `
-    release/keys/* `
     --title "餐这儿 3D v1.0.0" --notes-file docs/RELEASE-NOTES-v1.0.0.md
   ```
 
