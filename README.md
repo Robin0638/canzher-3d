@@ -6,11 +6,19 @@
 
 ## 截图
 
-| 开始 | 选店型 | 经营 |
+| 开始 | 选址开店 | 选择店型 |
 | :---: | :---: | :---: |
-| ![开始](./docs/screenshots/01-home.png) | ![选店型](./docs/screenshots/03-shoptype.png) | ![经营](./docs/screenshots/04-game.png) |
+| ![开始](./docs/screenshots/01-home.png) | ![选址开店](./docs/screenshots/04-map.png) | ![选择店型](./docs/screenshots/05-shoptype.png) |
 
-> 更多截图（含选址地图、个人主页）见 [`docs/screenshots/`](./docs/screenshots/)。
+| 店铺经营 | 员工 | 加盟招商 |
+| :---: | :---: | :---: |
+| ![店铺经营](./docs/screenshots/08-game.png) | ![员工](./docs/screenshots/10-staff.png) | ![加盟招商](./docs/screenshots/11-franchise.png) |
+
+| 财务中心 | 活动 | 我的 |
+| :---: | :---: | :---: |
+| ![财务中心](./docs/screenshots/09-money.png) | ![活动](./docs/screenshots/12-activity.png) | ![我的](./docs/screenshots/13-profile.png) |
+
+> 更多截图（关于、起昵称、店名确认、营业时长设置）见 [`docs/screenshots/`](./docs/screenshots/)。
 
 ## 试玩方式
 
