@@ -18,9 +18,17 @@
 | :---: | :---: | :---: |
 | ![财务中心](./docs/screenshots/09-money.png) | ![活动](./docs/screenshots/12-activity.png) | ![我的](./docs/screenshots/13-profile.png) |
 
-> 更多截图（关于、起昵称、店名确认、营业时长设置）见 [`docs/screenshots/`](./docs/screenshots/)。
+| 菜单管理 | 选品策略 | 通知中心 |
+| :---: | :---: | :---: |
+| ![菜单管理](./docs/screenshots/14-menu.png) | ![选品策略](./docs/screenshots/15-supply.png) | ![通知中心](./docs/screenshots/16-notif.png) |
+
+> 更多截图（关于、起昵称、店名确认、营业时长、日历、营销活动）见 [`docs/screenshots/`](./docs/screenshots/)。
 
 ## 试玩方式
+
+### 在线版（无需安装，点开即玩）
+
+**<https://canzher-ec4pcjpnb9y.qoder.zone>**
 
 ### 方式一：浏览器直接打开（推荐）
 
@@ -38,6 +46,11 @@ npx serve .
 ```
 
 访问 <http://localhost:8000> 即可。此模式下游戏直接读取 `data/*.json`，改完刷新页面就生效，适合做内容/Mod 调试。
+
+### 方式三：桌面 App / Android App
+
+- **Windows / Linux 桌面版**（x64 / x86 / ARM64，deb / rpm）：到 [Releases](https://github.com/Robin0638/canzher-3d/releases) 下载安装器或免安装包，构建与签名说明见 [docs/desktop-build.md](docs/desktop-build.md)。
+- **Android**：[Releases](https://github.com/Robin0638/canzher-3d/releases) 下载 `CanZher-1.0.0-android.apk`（含 arm64-v8a / armeabi-v7a / x86 三种架构；安装时需允许「未知来源应用」）。自行打包方法见 [docs/build.md](docs/build.md)。
 
 ### 存档位置
 

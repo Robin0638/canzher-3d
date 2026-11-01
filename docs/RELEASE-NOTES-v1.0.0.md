@@ -2,6 +2,8 @@
 
 > 附件从本地 `release/` 目录上传（构建产物不进 git 仓库，通过 Release 分发）。
 
+**在线试玩（无需安装）：<https://canzher-ec4pcjpnb9y.qoder.zone>**
+
 ## 下载
 
 ### Windows（x64 / x86 / ARM64）
@@ -14,6 +16,12 @@
 | `CanZher-1.0.0-Setup.exe` | 三架构合并安装器（自动选择） |
 | `CanZher-1.0.0-Portable-*.exe` | 免安装便携版（单文件） |
 | `CanZher-1.0.0-*.zip` | 免安装 zip 包 |
+
+### Android
+
+| 文件 | 适用 |
+|------|------|
+| `CanZher-1.0.0-android.apk` | Android 5.0+（arm64-v8a / armeabi-v7a / x86） |
 
 ### Linux（amd64 / arm64 / armhf）
 

@@ -176,6 +176,49 @@ async function dismissOverlays(win) {
   await dismissOverlays(win);
   await shot(win, '13-profile.png');
 
+  // 14 菜单管理
+  await js(win, `document.getElementById('nav-tab-shop').click()`);
+  await sleep(600);
+  await js(win, `G.showMenuModal()`);
+  await shot(win, '14-menu.png');
+  await js(win, `closeMenuModal()`);
+
+  // 15 选品策略
+  await js(win, `G.showSupplyModal()`);
+  await shot(win, '15-supply.png');
+  await js(win, `closeSupplyModal()`);
+
+  // 16 通知中心
+  await js(win, `G.openNotif()`);
+  await shot(win, '16-notif.png');
+  await js(win, `G.closeNotif()`);
+
+  // 17 日历
+  await js(win, `openCal()`);
+  await shot(win, '17-calendar.png');
+  await js(win, `closeCal()`);
+
+  // 18 营销活动
+  await js(win, `G.openPromo()`);
+  await shot(win, '18-promo.png');
+  await js(win, `G.closePromo()`);
+
+  // 19 PK 对战（点击「爆单冲峰」入口）
+  const pk = await js(win, `(function(){
+    var els = Array.prototype.slice.call(document.querySelectorAll('button, div[onclick], span[onclick]'));
+    var b = els.find(function(x){ return /爆单冲峰/.test(x.textContent); });
+    if (b) { b.click(); return 'ok'; }
+    return 'no-button';
+  })()`);
+  console.log('pk entry =>', pk);
+  await sleep(2500);
+  const pkOn = await js(win, `(function(){
+    var s = document.getElementById('screen-pk');
+    return !!(s && getComputedStyle(s).display !== 'none');
+  })()`);
+  if (pkOn) await shot(win, '19-pk.png');
+  else console.log('pk screen not visible, skipped');
+
   console.log('ALL DONE');
   app.exit(0);
 })().catch(e => { console.error('FATAL', e); app.exit(1); });
