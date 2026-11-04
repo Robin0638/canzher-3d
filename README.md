@@ -91,7 +91,7 @@ npx serve .
 
 ## 许可证
 
-- **代码**：MIT License → [LICENSE](./LICENSE)
+- **代码**：PolyForm Noncommercial 1.0.0（个人娱乐、学习、Mod 与二次创作免费；**商业使用需联系作者获得授权**）→ [LICENSE](./LICENSE)
 - **素材**（图片、音频、图标）：CC BY 4.0 → [LICENSE-assets](./LICENSE-assets)
 
 代码与素材分开授权，便于二次创作与 Mod 分发。第三方组件（Three.js、Feather Icons）见 [THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md)。

@@ -5,7 +5,7 @@
 
 | 内容 | 授权 | 文件 |
 |------|------|------|
-| 代码（`*.html` / `*.js` / `*.css` / `tools/` / `data/*.json` 的结构与逻辑） | MIT License | [`LICENSE`](./LICENSE) |
+| 代码（`*.html` / `*.js` / `*.css` / `tools/` / `data/*.json` 的结构与逻辑） | PolyForm Noncommercial 1.0.0（非商业使用免费，商用需联系作者授权） | [`LICENSE`](./LICENSE) |
 | 素材（图片 / 图标 / 字体 / 音频） | CC BY 4.0 | 本文件 |
 
 **本许可证适用范围**：`icons/`（图标 SVG）、`docs/screenshots/`（截图）、`unpackage/`（打包产生的图片资源）

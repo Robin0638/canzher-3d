@@ -66,7 +66,7 @@ fork → git clone → 新建分支 → 修改 → 本地验证 → 提交 PR
 ## 行为准则
 
 - 保持友善与建设性
-- 尊重原创内容许可证：代码 MIT、素材 CC BY 4.0（详见 [LICENSE](./LICENSE)）
+- 尊重原创内容许可证：代码 PolyForm Noncommercial 1.0.0（非商业使用免费，商用需联系作者授权）、素材 CC BY 4.0（详见 [LICENSE](./LICENSE)）
 - 商业品牌 / 商标请走通用品类词（如「炸鸡」而非具体品牌名）
 
 ## 联系方式

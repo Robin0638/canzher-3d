@@ -2,7 +2,7 @@
 
 > **适用版本**：数据驱动化完成之后（菜品 / 评价 / 事件 / 升级表全部外置到 `data/*.json`）
 > **难度**：会改 JSON 即可，**不需要写 JavaScript**
-> **许可证**：代码 MIT，素材 CC BY 4.0（见 [LICENSE](../LICENSE)、[LICENSE-assets](../LICENSE-assets)）
+> **许可证**：代码 PolyForm Noncommercial 1.0.0（Mod 与二次创作免费，商用需联系作者授权），素材 CC BY 4.0（见 [LICENSE](../LICENSE)、[LICENSE-assets](../LICENSE-assets)）
 
 餐这儿的所有静态内容都已经从 `js/game.js` 抽到 `data/` 目录下的 7 个 JSON 文件里。
 **改 JSON = 改游戏内容**，这就是目前的 Mod 方式。
@@ -341,7 +341,7 @@
 
 ## 9. 许可证与内容规范
 
-- 代码：MIT；素材：CC BY 4.0 —— 你的内容贡献默认按素材许可分发，署名归你
+- 代码：PolyForm Noncommercial 1.0.0；素材：CC BY 4.0 —— 你的内容贡献默认按上述许可分发，署名归你
 - 二次分发请保留署名，并注明修改
 - 内容规范：不使用真实商业品牌与商标；不添加违规、歧视性内容
 - 有问题先开 [Issue](../issues) 或 [Discussion](../discussions)
